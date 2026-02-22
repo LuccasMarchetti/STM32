@@ -1,0 +1,438 @@
+#include "ethernet_dhcp.h"
+#include "w5500.h"
+#include "ethernet_dns.h"
+#include "ethernet_ntp.h"
+
+uint16_t build_dhcp_discover(uint8_t * buffer, uint8_t *mac_addr, uint32_t xid, char * hostname) {
+
+    dhcp_packet_t *pkt = (dhcp_packet_t *)buffer;
+
+    memset(pkt, 0, sizeof(dhcp_packet_t));
+
+
+    // ==========================================
+    // Fixed Header
+    // ==========================================
+
+    pkt->op    = DHCP_OP_REQUEST;      // 1 = Boot Request (Client -> Server)
+    pkt->htype = DHCP_HTYPE_ETHERNET;  // 1 = Ethernet
+    pkt->hlen  = DHCP_HLEN_ETHERNET;   // 6 = MAC Length
+    pkt->hops  = 0;                    // Always 0 for client
+
+    // Transaction ID
+    pkt->xid   = htonl(xid);
+
+    pkt->secs  = 0;
+
+    pkt->flags = htons(DHCP_FLAG_BROADCAST);
+
+    pkt->ciaddr = 0;
+    pkt->yiaddr = 0;
+    pkt->siaddr = 0;
+    pkt->giaddr = 0;
+
+    memcpy(pkt->chaddr, mac_addr, 6);
+
+    pkt->magic_cookie = htonl(DHCP_MAGIC_COOKIE);
+
+    // ==========================================
+    // Option Fields
+    // ==========================================
+
+    uint8_t *opt_ptr = pkt->options;
+
+    // --- Option 53: Message Type = DISCOVER ---
+    *opt_ptr++ = DHCP_OPT_MSG_TYPE;    // Code 53
+    *opt_ptr++ = 1;                    // Length 1 byte
+    *opt_ptr++ = DHCP_MSG_DISCOVER;    // Value 1 (Discover)
+
+    // --- Option 55: Parameter Request List ---
+    // Mask, Gateway, DNS and Domain Name
+    *opt_ptr++ = DHCP_OPT_PARAM_LIST;  // Code 55
+    *opt_ptr++ = 4;                    // Length 4 bytes
+    *opt_ptr++ = DHCP_OPT_SUBNET_MASK;
+    *opt_ptr++ = DHCP_OPT_ROUTER;
+    *opt_ptr++ = DHCP_OPT_DNS_SERVER;
+    *opt_ptr++ = DHCP_OPT_DOMAIN_NAME;
+
+    // --- Option 61: Client Identifier --
+    *opt_ptr++ = DHCP_OPT_CLIENT_ID;
+    *opt_ptr++ = 7;                    // Length (1 byte type + 6 bytes MAC)
+    *opt_ptr++ = DHCP_HTYPE_ETHERNET;  // Type 1
+    memcpy(opt_ptr, mac_addr, 6);
+    opt_ptr += 6;
+
+    // --- Option 12: Host Name ---
+    uint8_t len = strlen(hostname);
+
+    *opt_ptr++ = 12;
+    *opt_ptr++ = len;
+    memcpy(opt_ptr, hostname, len);
+    opt_ptr += len;
+
+    // --- Option 255: END ---
+    *opt_ptr++ = DHCP_OPT_END;
+
+    return DHCP_FIXED_LEN + (opt_ptr - pkt->options);
+}
+
+uint16_t build_dhcp_request(uint8_t * buffer, uint8_t *mac_addr, uint32_t xid, uint8_t * offered_ip, uint8_t * server_id, char * hostname) {
+
+    dhcp_packet_t *pkt = (dhcp_packet_t *)buffer;
+    memset(pkt, 0, sizeof(dhcp_packet_t));
+    // ==========================================
+    // HEADER
+    // ==========================================
+    pkt->op    = DHCP_OP_REQUEST;
+    pkt->htype = DHCP_HTYPE_ETHERNET;
+    pkt->hlen  = DHCP_HLEN_ETHERNET;
+    pkt->hops  = 0;
+
+    // IMPORTANT: use the same XID that you have used in Discover
+    pkt->xid   = htonl(xid);
+
+    pkt->secs  = 0;
+
+    // Broadcast flag (0x8000)
+    pkt->flags = htons(DHCP_FLAG_BROADCAST);
+
+    pkt->ciaddr = 0;
+    pkt->yiaddr = 0;
+    pkt->siaddr = 0;
+    pkt->giaddr = 0;
+
+    memcpy(pkt->chaddr, mac_addr, 6);
+
+    // Magic Cookie
+    pkt->magic_cookie = htonl(DHCP_MAGIC_COOKIE);
+
+    // ==========================================
+    // Options
+    // ==========================================
+    uint8_t *opt = pkt->options;
+
+    // 1. Option 53: Message Type = REQUEST (3)
+    *opt++ = DHCP_OPT_MSG_TYPE;
+    *opt++ = 1;
+    *opt++ = DHCP_MSG_REQUEST;
+
+    // 2. Option 50: Requested IP Address
+    *opt++ = DHCP_OPT_REQUESTED_IP;
+    *opt++ = 4;
+    memcpy(opt, offered_ip, 4);
+    opt += 4;
+
+    // 3. Option 54: Server Identifier (O IP do Servidor que te respondeu)
+    *opt++ = DHCP_OPT_SERVER_ID;
+    *opt++ = 4;
+    memcpy(opt, server_id, 4);
+    opt += 4;
+
+    // 4. Option 12: Hostname
+    *opt++ = DHCP_OPT_HOST_NAME;
+    *opt++ = strlen(hostname);
+    memcpy(opt, hostname, strlen(hostname));
+    opt += strlen(hostname);
+
+    // 5. Option 55: Parameter Request List
+    *opt++ = DHCP_OPT_PARAM_LIST;
+    *opt++ = 3;
+    *opt++ = DHCP_OPT_SUBNET_MASK;
+    *opt++ = DHCP_OPT_ROUTER;
+    *opt++ = DHCP_OPT_DNS_SERVER;
+
+    // 6. Option 255: End
+    *opt++ = DHCP_OPT_END;
+
+    return DHCP_FIXED_LEN + (opt - pkt->options);
+}
+
+// Retorna o Tipo da Mensagem (DHCP_MSG_OFFER, DHCP_MSG_ACK, etc) ou 0 se erro
+uint8_t DHCP_Parse_Response(DNS_Control_t * dns, NTP_Control_t * ntp, uint8_t *buffer, uint16_t len, uint32_t expected_xid, DHCP_Control_t *dhcp_ctrl) {
+    dhcp_packet_t *pkt = (dhcp_packet_t *)buffer;
+
+    // 1. Validações Básicas
+    if (len < DHCP_FIXED_LEN) return 0; // Pacote muito pequeno
+    if (pkt->op != DHCP_OP_REPLY) return 0; // Não é resposta
+    if (ntohl(pkt->xid) != expected_xid) return 0; // Não é para nós (XID errado)
+    if (ntohl(pkt->magic_cookie) != DHCP_MAGIC_COOKIE) return 0; // Cookie inválido
+
+    // 2. Iterar pelas Opções
+    uint8_t *opt_ptr = (uint8_t *)pkt->options;
+    uint8_t *end_ptr = buffer + len;
+    uint8_t msg_type = 0;
+
+    while (opt_ptr < end_ptr) {
+        uint8_t code = *opt_ptr++;
+        if (code == DHCP_OPT_END) break;
+        if (code == DHCP_OPT_PAD) continue;
+
+        uint8_t opt_len = *opt_ptr++;
+
+        // Proteção contra buffer overflow na leitura
+        if (opt_ptr + opt_len > end_ptr) break;
+
+        switch (code) {
+        	case DHCP_OPT_SUBNET_MASK:
+				if (opt_len == 4) {
+					memcpy(dhcp_ctrl->subnet, opt_ptr, 4);
+				}
+				break;
+			case DHCP_OPT_ROUTER:
+				if (opt_len >= 4) {
+					memcpy(dhcp_ctrl->gateway, opt_ptr, 4);
+				}
+				break;
+			case DHCP_OPT_DNS_SERVER:
+				if (opt_len >= 4) {
+					memcpy(dns->dns_server, opt_ptr, 4);
+				}
+				break;
+			case DHCP_OPT_NTP_SERVER:
+				if (opt_len >= 4) {
+					memcpy(ntp->server_ip, opt_ptr, 4);
+				}
+				break;
+			case DHCP_OPT_LEASE_TIME:
+				if (opt_len == 4) {
+					memcpy(&dhcp_ctrl->lease_time, opt_ptr, 4);
+				}
+				break;
+            case DHCP_OPT_MSG_TYPE:
+                if (opt_len == 1) msg_type = *opt_ptr;
+                break;
+
+            case DHCP_OPT_SERVER_ID:
+                if (opt_len == 4) memcpy(dhcp_ctrl->server_id, opt_ptr, 4);
+                break;
+        }
+
+        opt_ptr += opt_len; // Avança para a próxima opção
+    }
+
+    // Se a mensagem for válida, salvamos o IP ofertado (yiaddr)
+    if (msg_type == DHCP_MSG_OFFER || msg_type == DHCP_MSG_ACK) {
+            memcpy(dhcp_ctrl->offered_ip, &pkt->yiaddr, 4);
+    } else if (msg_type == DHCP_MSG_NAK) {
+		// Opcional: Limpar dados se receber um NAK
+		memset(dhcp_ctrl->offered_ip,0,4);
+	}
+
+	return msg_type;
+}
+
+
+bool dhcp_timeout(DHCP_Control_t *dhcp, uint32_t timeout_ms) {
+	return (HAL_GetTick() - dhcp->t_start) > timeout_ms;
+}
+
+bool dhcp_T1_expired(DHCP_Control_t *dhcp) {
+	if (dhcp->lease_time == 0xFFFFFFFF) return false; // Lease infinito
+	if (dhcp->lease_time == 0) return true; // Lease expirado
+	if (dhcp->lease_time > UINT32_MAX/1000) dhcp->lease_time = UINT32_MAX/1000; // Proteção contra overflow
+	return (HAL_GetTick() - dhcp->t_start) > (dhcp->lease_time * 1000 * 0.5); // Considera expirado quando chegar em 50% do tempo de lease, para renovar com antecedência
+}
+
+bool dhcp_T2_expired(DHCP_Control_t *dhcp) {
+	if (dhcp->lease_time == 0xFFFFFFFF) return false; // Lease infinito
+	if (dhcp->lease_time == 0) return true; // Lease expirado
+	if (dhcp->lease_time > UINT32_MAX/1000) dhcp->lease_time = UINT32_MAX/1000; // Proteção contra overflow
+	return (HAL_GetTick() - dhcp->t_start) > (dhcp->lease_time * 1000 * 0.875); // Considera expirado quando chegar em 87.5% do tempo de lease, para renovar com antecedência
+}
+
+bool dhcp_lease_expired(DHCP_Control_t *dhcp) {
+	if (dhcp->lease_time == 0xFFFFFFFF) return false; // Lease infinito
+	if (dhcp->lease_time == 0) return true; // Lease expirado
+	if (dhcp->lease_time > UINT32_MAX/1000) dhcp->lease_time = UINT32_MAX/1000; // Proteção contra overflow
+	bool expired = (HAL_GetTick() - dhcp->t_start) > (dhcp->lease_time * 1000);
+	if (expired) {
+		// Limpa os dados do DHCP para forçar uma nova negociação
+		memset(dhcp->offered_ip, 0, 4);
+		memset(dhcp->gateway, 0, 4);
+		memset(dhcp->subnet, 0, 4);
+		memset(dhcp->server_id, 0, 4);
+		dhcp->lease_time = 0;
+	}
+	return expired; // Lease expirado
+}
+
+void DHCP_FSM(W5500_Driver_t *drv)
+{
+    DHCP_Control_t *dhcp = &drv->dhcp;
+    bool link_status = 0;
+    static bool previous_link_status = 0;
+    if (W5500_ReadLinkStatus(drv, &link_status) != HAL_OK) {
+		return;
+	}
+	if (!link_status && previous_link_status) {
+		// Se o link estiver desconectado, reseta o estado do DHCP
+		if (dhcp->socket != 0xFF) {
+			W5500_CloseSocket(drv, dhcp->socket);
+		}
+		dhcp->state = DHCP_IDLE;
+		dhcp->socket = 0xFF;
+		drv->net_state = SYS_NET_INIT;
+		memset(drv->IP, 0, 4);
+		memset(drv->GATEWAY, 0, 4);
+		memset(drv->SUBNET, 0, 4);
+		W5500_SetIP(drv);
+		W5500_SetGATEWAY(drv);
+		W5500_SetSUBNET(drv);
+		return;
+	}
+
+	previous_link_status = link_status;
+
+    switch (dhcp->state)
+    {
+        case DHCP_IDLE:
+        	drv->net_state = SYS_NET_DHCP_RUNNING;
+            dhcp->socket = 0xFF;
+            dhcp->state = DHCP_SEND_DISCOVER;
+            break;
+
+        case DHCP_SEND_DISCOVER:
+            DHCP_SendDiscover(drv);
+            dhcp->t_start = HAL_GetTick();
+            dhcp->state = DHCP_WAIT_OFFER;
+            break;
+
+        case DHCP_WAIT_OFFER:
+            if (dhcp_timeout(dhcp, (uint32_t)DHCP_TIMEOUT_MS))
+                dhcp->state = DHCP_SEND_DISCOVER;
+            break;
+
+        case DHCP_SEND_REQUEST:
+            DHCP_SendRequest(drv);
+            dhcp->t_start = HAL_GetTick();
+            dhcp->state = DHCP_WAIT_ACK;
+            break;
+
+        case DHCP_WAIT_ACK:
+            if (dhcp_timeout(dhcp, (uint32_t)DHCP_TIMEOUT_MS)) {
+            	for (uint8_t i = 0; i < 4; i++) {
+            		if (dhcp->offered_ip[i] != 0) {
+						// Se já tinha um IP oferecido, tenta renovar (Request) ao invés de começar do zero (Discover)
+            			if (dhcp_lease_expired(dhcp)) {
+            				dhcp->state = DHCP_IDLE;
+            				memset(drv->IP, 0, 4);
+            				memset(drv->GATEWAY, 0, 4);
+            				memset(drv->SUBNET, 0, 4);
+            				W5500_SetIP(drv);
+            				W5500_SetGATEWAY(drv);
+            				W5500_SetSUBNET(drv);
+            				W5500_CloseSocket(drv, dhcp->socket);
+							return;
+            			}
+            			else dhcp->state = DHCP_SEND_REQUEST;
+						return;
+					}
+            	}
+                dhcp->state = DHCP_SEND_DISCOVER;
+            }
+            break;
+
+        case DHCP_BOUND:
+        	if (dhcp->ack_received) {
+        		W5500_CloseSocket(drv, dhcp->socket);
+        		dhcp->socket = 0xFF;
+        		dhcp->ack_received = false;
+				// Configura IP, Gateway e Subnet no W5500
+				for (uint8_t i = 0; i < 4; i++) {
+					drv->IP[i] = dhcp->offered_ip[i];
+					drv->GATEWAY[i] = dhcp->gateway[i];
+					drv->SUBNET[i] = dhcp->subnet[i];
+				}
+				dhcp->t_start    = HAL_GetTick();
+				W5500_SetIP(drv);
+				W5500_SetGATEWAY(drv);
+				W5500_SetSUBNET(drv);
+				if (memcmp(drv->dns.dns_server, (uint8_t[]){0,0,0,0}, 4) == 0) {
+					// Se o DHCP não forneceu um servidor de DNS, usa um público (Google)
+					memcpy(drv->dns.dns_server, (uint8_t[]){8,8,8,8}, 4); //
+				}
+				drv->net_state = SYS_NET_DNS_RUNNING;
+				drv->dns.retries = 0;
+				strcpy(drv->dns.target_domain, "pool.ntp.org");
+				drv->dns.state = DNS_SEND_QUERY; // Inicia a máquina do DNS
+        	} else if (dhcp_T1_expired(dhcp)) {
+        		dhcp->socket = W5500_OpenSocket(drv, W5500_Sn_MR_UDP, DHCP_CLIENT_PORT);
+        		dhcp->state = DHCP_SEND_REQUEST;
+        	}
+
+            break;
+
+        default:
+            dhcp->state = DHCP_ERROR;
+            break;
+    }
+}
+
+void DHCP_HandleRx(W5500_Driver_t *drv, uint8_t *buf, uint16_t len)
+{
+    DHCP_Control_t *dhcp = &drv->dhcp;
+    uint8_t msg = DHCP_Parse_Response(&drv->dns, &drv->ntp, buf, len, dhcp->xid, dhcp);
+
+    switch (msg)
+    {
+        case DHCP_MSG_OFFER:
+            dhcp->state = DHCP_SEND_REQUEST;
+            break;
+
+        case DHCP_MSG_ACK:
+            dhcp->state = DHCP_BOUND;
+            dhcp->ack_received = true;
+            break;
+
+        case DHCP_MSG_NAK:
+            dhcp->state = DHCP_SEND_DISCOVER;
+            break;
+
+        default:
+            break;
+    }
+}
+
+
+void DHCP_SendRequest(W5500_Driver_t *drv)
+{
+    DHCP_Control_t *dhcp = &drv->dhcp;
+
+    uint16_t len = build_dhcp_request(
+        drv->sockets[dhcp->socket].tx_buf,
+        drv->MAC,
+        dhcp->xid,
+        dhcp->offered_ip,
+        dhcp->server_id,
+		drv->hostname
+    );
+
+    W5500_SocketSend(drv, dhcp->socket, drv->sockets[dhcp->socket].tx_buf, len);
+}
+
+void DHCP_SendDiscover(W5500_Driver_t *drv) {
+    // Abre o socket APENAS se ainda não estiver aberto
+    if (drv->dhcp.socket == 0xFF) {
+    	drv->dhcp.socket = W5500_OpenSocket(drv, W5500_Sn_MR_UDP, DHCP_CLIENT_PORT);
+    	if (drv->dhcp.socket == 0xFF) {
+			return;
+		}
+    }
+
+    // Configura destino (Broadcast)
+    uint8_t dest_ip[4] = {255, 255, 255, 255};
+    W5500_SetSocketDestIP(drv, drv->dhcp.socket, dest_ip);
+    W5500_SetSocketDestPort(drv, drv->dhcp.socket, DHCP_SERVER_PORT);
+
+    // Gera XID novo
+    drv->dhcp.xid = HAL_GetTick(); // Usar tick como semente simples
+
+    // Monta e Envia
+    uint16_t len = build_dhcp_discover(
+    		drv->sockets[drv->dhcp.socket].tx_buf,
+			drv->MAC,
+			drv->dhcp.xid,
+			drv->hostname
+		);
+    W5500_SocketSend(drv, drv->dhcp.socket, drv->sockets[drv->dhcp.socket].tx_buf, len);
+}

@@ -1,0 +1,1488 @@
+2026-02-20 19:46:13,282 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 7:46:13 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 19:46:13,298 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 19:46:13,299 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 19:46:13,300 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 7:46:13 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 19:46:13,301 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 19:46:13,301 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 19:46:14,103 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 7:46:14 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 19:46:14,105 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 19:46:14,105 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 19:46:14,106 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 7:46:14 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 19:46:14,107 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 19:46:14,107 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:16,183 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:16 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:16,184 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:16,184 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:16,185 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:16 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:16,186 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:16,186 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:16,869 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:16 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:16,870 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:16,870 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:16,871 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:16 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:16,872 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:16,872 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:19,897 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:19,898 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:19,898 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:19,899 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:19,899 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:19,899 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:20,501 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:20,504 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:20,504 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:20,505 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:20,506 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:20,506 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:30,718 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:30 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:30,719 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:30,719 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:30,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:30 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:30,722 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:30,723 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:31,286 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:31,287 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:31,287 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:31,288 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:31,289 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:31,289 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:31,316 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:31,316 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:31,316 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:31,317 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:31,318 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:31,318 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:31,319 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:31,319 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:31,320 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:31,320 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:31,321 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:31,321 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:31,359 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:31,360 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:31,360 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:31,361 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:31,361 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:31,361 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:31,970 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:31,971 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:31,971 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:31,972 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:31,973 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:31,973 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:32,023 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:32,024 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:32,024 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:32,025 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:32,025 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:32,027 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:32,027 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:32,027 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:32,028 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:32,028 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:32,028 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:32,028 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:32,056 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:32,057 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:32,057 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:32,058 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:32,059 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:32,059 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:32,655 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:32,656 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:32,656 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:32,657 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:32,657 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:32,657 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:35,108 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:35,109 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:35,109 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:35,110 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:35,110 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:35,111 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:35,679 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:35,680 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:35,680 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:35,681 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:35,681 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:35,682 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:35,698 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:35,700 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:35,700 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:35,700 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:35,701 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:35,701 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:36,298 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:36,299 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:36,299 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:36,300 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:36,301 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:36,301 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:36,324 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:36,325 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:36,325 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:36,326 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:36,327 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:36,327 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:36,328 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:36,328 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:36,328 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:36,330 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:36,330 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:36,330 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:36,354 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:36,356 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:36,356 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:36,357 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:36,358 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:36,358 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:36,879 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:36,879 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:36,880 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:36,881 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:36,881 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:36,881 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:37,115 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:37,116 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:37,116 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:37,117 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:37,117 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:37,117 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:37,118 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:37,119 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:37,119 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:37,119 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:37 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:37,120 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:37,120 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:38,214 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:38,214 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:38,214 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:38,215 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:38,215 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:38,215 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:38,216 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:38,217 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:38,217 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:38,218 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:38,219 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:38,219 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:38,579 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:38,579 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:38,580 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:38,581 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:38,582 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:38,582 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:39,207 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:39,208 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:39,208 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:39,209 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:39,209 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:39,209 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:39,232 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:39,233 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:39,233 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:39,234 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:39,235 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:39,236 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:39,809 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:39,809 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:13:39,810 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:13:39,811 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:13:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:13:39,812 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:13:39,812 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:18,338 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:18 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:18,339 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:18,339 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:18,340 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:18 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:18,340 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:18,340 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:19,364 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:19,365 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:19,365 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:19,367 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:19,367 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:19,367 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:19,387 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:19,388 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:19,388 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:19,388 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:19,390 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:19,390 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:20,009 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:20,009 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:20,009 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:20,010 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:20,011 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:20,011 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:20,027 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:20,028 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:20,028 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:20,028 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:20,029 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:20,029 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:20,031 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:20,031 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:20,031 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:20,032 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:20,033 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:20,033 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:20,062 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:20,062 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:20,062 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:20,063 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:20,064 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:20,064 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:20,596 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:20,598 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:20,598 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:20,600 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:20,602 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:20,602 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:20,718 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:20,719 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:20,719 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:20,720 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:20,720 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:20,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:21,792 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:21,794 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:21,794 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:21,797 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:21,798 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:21,798 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:21,818 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:21,818 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:21,818 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:21,818 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:21,819 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:21,819 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:21,820 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:21,820 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:21,820 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:21,822 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:21,822 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:21,822 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:21,847 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:21,848 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:21,848 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:21,849 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:21,849 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:21,849 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:22,472 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:22,472 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:22,472 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:22,474 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:22,474 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:22,474 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:22,805 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:22,805 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:22,805 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:22,806 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:22,807 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:22,807 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:22,808 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:22,809 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:22,809 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:22,810 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:22,810 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:22,810 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:23,211 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:23,212 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:23,212 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:23,213 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:23,214 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:23,214 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:23,919 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:23,920 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:23,920 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:23,921 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:23,921 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:23,921 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:23,986 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:23,987 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:23,987 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:23,987 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:23,988 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:23,988 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:23,989 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:23,989 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:23,989 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:23,990 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:23,990 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:23,991 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:24,014 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:24,015 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:24,015 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:24,016 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:24,016 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:24,016 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:24,505 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:24,506 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:24,506 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:24,507 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:24,507 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:24,507 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:56,227 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:56 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:56,228 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:56,228 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:56,229 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:56 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:56,229 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:56,229 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:56,230 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:56 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:56,230 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:56,230 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:56,231 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:56 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:56,231 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:56,231 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:56,591 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:56 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:56,592 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:56,592 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:56,593 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:56 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:56,593 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:56,593 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:57,045 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:57 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:57,045 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:57,045 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:57,046 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:57 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:57,047 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:57,047 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,168 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,169 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:58,169 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,169 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,170 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:58,170 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,358 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,359 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:58,359 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,360 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,361 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:58,361 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,378 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,379 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:58,379 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,379 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,380 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:58,380 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,574 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,575 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:58,576 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,578 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,579 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:58,579 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,599 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,600 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:58,600 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,601 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,601 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:58,601 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,792 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,793 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:58,793 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,794 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,795 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:58,795 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,811 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,811 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:58,811 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:58,812 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:58,812 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:58,812 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:59,012 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:59,014 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:59,014 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:59,016 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:59,017 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:59,017 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:59,034 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:59,034 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:59,034 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:59,035 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:59,036 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:59,036 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:59,548 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:59,549 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:59,549 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:59,550 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:59,550 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:59,550 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:59,567 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:59,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:14:59,568 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:14:59,569 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:14:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:14:59,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:14:59,570 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:15:00,210 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:15:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:15:00,210 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:15:00,210 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:15:00,211 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:15:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:15:00,212 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:15:00,212 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:15:00,231 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:15:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:15:00,232 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:15:00,232 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:15:00,233 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:15:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:15:00,233 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:15:00,233 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:15:00,799 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:15:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:15:00,799 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:15:00,799 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:15:00,801 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:15:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:15:00,802 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:15:00,802 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:18,479 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:18 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:18,480 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:20:18,480 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:18,482 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:18 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:18,482 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:20:18,482 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:19,266 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:19,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:20:19,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:19,269 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:19,270 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:20:19,270 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:19,290 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:19,290 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:20:19,290 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:19,292 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:19,292 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:20:19,292 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:19,861 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:19,862 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:20:19,862 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:19,863 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:19,864 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:20:19,864 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:19,882 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:19,882 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:20:19,882 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:19,883 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:19,884 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:20:19,884 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:20,478 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:20,479 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:20:20,479 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:20,480 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:20,481 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:20:20,481 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:20,498 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:20,500 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:20:20,500 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:20,501 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:20,501 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:20:20,501 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:20,502 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:20,502 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:20:20,502 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:20,503 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:20,503 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:20:20,503 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:20,529 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:20,529 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:20:20,530 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:20,530 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:20 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:20,531 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:20:20,531 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:21,239 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:21,240 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:20:21,240 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:20:21,241 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:20:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:20:21,242 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:20:21,242 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:53:45,453 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:53:45 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:53:45,455 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:53:45,455 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:53:45,455 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:53:45 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:53:45,456 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:53:45,456 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:53:46,180 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:53:46 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:53:46,180 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:53:46,180 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:53:46,181 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:53:46 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:53:46,181 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:53:46,181 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:01,078 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:01 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:01,079 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:01,079 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:01,079 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:01 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:01,080 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:01,080 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:01,874 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:01 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:01,874 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:01,874 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:01,875 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:01 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:01,875 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:01,875 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:01,896 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:01 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:01,897 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:01,897 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:01,897 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:01 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:01,898 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:01,898 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:02,487 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:02,487 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:02,487 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:02,488 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:02,489 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:02,489 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:02,582 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:02,583 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:02,583 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:02,584 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:02,584 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:02,584 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:03,227 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:03,228 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:03,228 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:03,229 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:03,229 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:03,229 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:03,247 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:03,249 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:03,249 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:03,250 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:03,251 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:03,251 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:03,871 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:03,872 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:03,872 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:03,872 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:03,873 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:03,873 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:03,890 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:03,890 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:03,890 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:03,891 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:03,891 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:03,891 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:04,087 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:04,088 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:04,088 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:04,089 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:04,090 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:04,090 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:04,140 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:04,141 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:04,142 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:04,142 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:04,143 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:04,144 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:05,352 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:05 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:05,353 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:05,354 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:05,355 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:05 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:05,355 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:05,355 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:05,411 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:05 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:05,412 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:05,412 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:05,413 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:05 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:05,413 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:05,413 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:06,188 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:06 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:06,188 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:06,189 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:06,189 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:06 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:06,190 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:06,190 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:06,216 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:06 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:06,216 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:06,216 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:06,217 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:06 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:06,218 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:06,218 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:07,287 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:07 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:07,288 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:07,289 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:07,290 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:07 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:07,290 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:07,290 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:07,308 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:07 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:07,309 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:07,309 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:07,310 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:07 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:07,310 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:07,311 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:07,311 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:07 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:07,312 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:07,312 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:07,312 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:07 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:07,313 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:07,313 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:07,337 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:07 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:07,338 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:07,338 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:07,339 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:07 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:07,340 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:07,340 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:08,028 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:08,029 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:08,029 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:08,030 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:08,030 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:08,030 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:08,043 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:08,043 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:08,043 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:08,044 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:08,044 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:08,044 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:08,244 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:08,244 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:08,244 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:08,245 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:08,246 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:08,246 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:08,267 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:08,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:08,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:08,268 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:08,269 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:08,269 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:08,915 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:08,915 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:08,915 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:08,916 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:08,917 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:08,918 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:08,944 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:08,945 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:08,945 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:08,947 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:08 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:08,947 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:08,947 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:10,073 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:10,074 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:10,074 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:10,076 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:10,076 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:10,076 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:10,104 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:10,105 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:10,105 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:10,105 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:10,106 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:10,106 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:10,298 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:10,300 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:10,300 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:10,302 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:10,303 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:10,303 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:10,334 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:10,335 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:10,335 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:10,336 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:10,337 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:10,337 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:10,518 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:10,518 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:10,518 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:10,519 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:10,520 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:10,520 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:10,539 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:10,539 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:10,540 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:10,540 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:10,541 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:10,541 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:11,130 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:11,130 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:11,131 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:11,131 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:11,132 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:11,132 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:11,328 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:11,328 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:11,329 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:11,329 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:11,330 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:11,330 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:11,331 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:11,331 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:11,331 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:11,332 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:11,332 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:11,332 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:11,676 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:11,677 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:11,677 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:11,679 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:11,679 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:11,679 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:11,680 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:11,680 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:11,680 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:11,681 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:11,681 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:11,681 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:13,824 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:13 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:13,825 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:13,825 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:13,825 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:13 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:13,826 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:13,826 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:16,950 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:16 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:16,951 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:16,952 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:16,953 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:16 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:16,953 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:16,953 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:16,976 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:16 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:16,978 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:16,978 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:16,979 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:16 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:16,980 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:16,980 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:17,655 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:17 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:17,656 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:17,656 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:17,657 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:17 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:17,657 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:17,657 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:18,996 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:18 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:18,997 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:18,997 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:18,998 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:18 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:18,999 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:18,999 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:19,653 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:19,654 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:19,654 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:19,655 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:19 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:19,655 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:19,655 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:22,157 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:22,158 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:22,158 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:22,158 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:22,159 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:22,159 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:22,928 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:22,929 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:22,929 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:22,930 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:22,931 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:22,931 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:22,949 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:22,950 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:22,950 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:22,951 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:22,951 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:22,951 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:23,497 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:23,499 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:23,499 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:23,500 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:23,500 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:23,500 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:23,516 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:23,516 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:23,516 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:23,517 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:23,518 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:23,518 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:23,518 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:23,519 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:23,519 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:23,520 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:23,520 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:23,520 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:23,550 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:23,551 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:23,551 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:23,553 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:23,553 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:23,553 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:24,189 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:24,190 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:24,191 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:24,193 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:24,194 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:24,194 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:25,696 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:25,696 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:25,696 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:25,697 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:25,697 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:25,697 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:25,698 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:25,698 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:25,698 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:25,699 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:25,699 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:25,700 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:25,850 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:25,851 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:25,851 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:25,851 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:25,852 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:25,852 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:25,853 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:25,853 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:25,853 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:25,854 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:25,855 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:25,855 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:25,988 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:25,988 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:25,988 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:25,989 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:25,989 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:25,989 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:25,989 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:25,991 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:25,991 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:25,991 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:25,991 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:25,991 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,121 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,122 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:26,122 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,123 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,123 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:26,123 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,124 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,124 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:26,124 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,125 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,125 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:26,126 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,247 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,247 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:26,247 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,248 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,248 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:26,248 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,249 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,249 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:26,249 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,250 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,251 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:26,251 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,362 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,363 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:26,363 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,363 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,365 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:26,365 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,365 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,366 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:26,366 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,366 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,367 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:26,367 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,598 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,598 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:26,598 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,599 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,600 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:26,600 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,600 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,601 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:26,601 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:26,601 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:26,602 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:26,602 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:27,403 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:27 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:27,403 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:27,404 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:27,404 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:27 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:27,405 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:27,405 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:27,980 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:27 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:27,981 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:27,981 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:27,982 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:27 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:27,983 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:27,983 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:28,006 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:28 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:28,007 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:28,007 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:28,007 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:28 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:28,008 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:28,008 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:29,064 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:29 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:29,064 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:29,064 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:29,065 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:29 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:29,065 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:29,065 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:29,086 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:29 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:29,086 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:29,086 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:29,086 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:29 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:29,088 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:29,088 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:29,622 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:29 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:29,624 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:29,624 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:29,625 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:29 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:29,625 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:29,625 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:31,654 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:31,655 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:31,655 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:31,656 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:31 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:31,657 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:31,657 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:32,415 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:32,416 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:32,416 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:32,417 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:32 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:32,418 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:32,418 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:48,344 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:48 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:48,344 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:48,345 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:48,345 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:48 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:48,346 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:48,346 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:49,026 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:49,027 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:49,027 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:49,027 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:49,028 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:49,028 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:49,057 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:49,057 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:49,057 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:49,058 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:49,059 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:49,059 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:49,799 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:49,799 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:49,799 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:49,800 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:49,800 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:49,800 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:49,819 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:49,820 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:49,820 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:49,821 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:49,822 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:49,822 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:50,421 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:50,421 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:50,421 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:50,422 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:50,423 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:50,423 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:50,440 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:50,440 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:50,440 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:50,442 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:50,442 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:50,442 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:51,045 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:51,045 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:51,045 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:51,046 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:51,046 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:51,046 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:51,061 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:51,062 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:51,062 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:51,062 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:51,063 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:51,063 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:51,063 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:51,064 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:51,064 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:51,064 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:51,065 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:51,065 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:51,086 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:51,087 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:51,087 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:51,088 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:51,088 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:51,088 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:51,708 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:51,709 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:51,709 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:51,709 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:51,710 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:51,710 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:51,769 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:51,770 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:51,770 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:51,770 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:51,771 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:51,771 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:52,496 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:52,497 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:52,497 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:52,498 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:52,499 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:52,499 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:52,522 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:52,522 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:52,523 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:52,523 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:52,524 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:52,524 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:52,715 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:52,716 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:52,716 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:52,718 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:52,719 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:52,719 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:54,372 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:54 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:54,373 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:54,373 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:54,373 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:54 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:54,374 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:54,374 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:54,981 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:54 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:54,981 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:54,981 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:54,982 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:54 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:54,982 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:54,982 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:55,004 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:55 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:55,005 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:55,005 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:55,006 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:55 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:55,006 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:55,006 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:55,704 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:55 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:55,705 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:55,705 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:55,706 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:55 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:55,706 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:55,706 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:57,208 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:57 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:57,209 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:57,209 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:57,210 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:57 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:57,211 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:57,211 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:57,929 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:57 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:57,929 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:57,929 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:57,930 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:57 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:57,931 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:57,931 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:58,976 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:58,977 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:58,977 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:58,978 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:58 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:58,978 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:58,978 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:59,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:59,721 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:59,722 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:59,722 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:59,723 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:59,723 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:59,737 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:59,738 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:57:59,739 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:57:59,740 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:57:59 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:57:59,741 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:57:59,741 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:58:00,421 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:58:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:58:00,422 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:58:00,422 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:58:00,423 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:58:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:58:00,423 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:58:00,423 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:58:00,439 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:58:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:58:00,439 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:58:00,439 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:58:00,440 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:58:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:58:00,442 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:58:00,442 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:58:00,971 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:58:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:58:00,971 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:58:00,971 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:58:00,972 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:58:00 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:58:00,972 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:58:00,972 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:58:03,840 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:58:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:58:03,841 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:58:03,841 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:58:03,842 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:58:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:58:03,842 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:58:03,842 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:58:04,541 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:58:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:58:04,542 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:58:04,542 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:58:04,544 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:58:04 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:58:04,545 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:58:04,545 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:59:50,286 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:59:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:59:50,287 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:59:50,287 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:59:50,288 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:59:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:59:50,288 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:59:50,288 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:59:51,764 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:59:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:59:51,765 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:59:51,765 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:59:51,766 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:59:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:59:51,767 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:59:51,767 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:59:54,985 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:59:54 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:59:54,986 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:59:54,986 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:59:54,986 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:59:54 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:59:54,987 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:59:54,987 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:59:55,500 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:59:55 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:59:55,501 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:59:55,501 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:59:55,503 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:59:55 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:59:55,503 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:59:55,504 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:59:55,525 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:59:55 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:59:55,526 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:59:55,526 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:59:55,527 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:59:55 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:59:55,528 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:59:55,528 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:59:56,047 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:59:56 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:59:56,049 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 20:59:56,049 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 20:59:56,050 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 8:59:56 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 20:59:56,051 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 20:59:56,051 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:02,363 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:02,365 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:00:02,365 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:02,366 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:02 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:02,366 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:00:02,366 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:03,016 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:03,018 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:00:03,018 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:03,020 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:03,021 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:00:03,021 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:03,036 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:03,038 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:00:03,038 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:03,039 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:03,040 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:00:03,040 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:03,040 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:03,041 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:00:03,041 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:03,042 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:03,042 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:00:03,042 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:03,056 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:03,057 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:00:03,057 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:03,058 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:03,058 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:00:03,058 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:03,672 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:03,673 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:00:03,673 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:03,674 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:03 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:03,674 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:00:03,674 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:11,863 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:11,863 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:00:11,863 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:11,864 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:11,864 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:00:11,864 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:12,510 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:12 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:12,511 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:00:12,511 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:12,513 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:12 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:12,514 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:00:12,514 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:12,532 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:12 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:12,532 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:00:12,532 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:12,533 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:12 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:12,534 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:00:12,534 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:13,610 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:13 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:13,610 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:00:13,611 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:13,613 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:13 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:13,614 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:00:13,614 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:13,654 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:13 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:13,655 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:00:13,655 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:13,656 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:13 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:13,657 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:00:13,657 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:14,276 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:14 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:14,276 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:00:14,276 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:00:14,277 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:00:14 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:00:14,278 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:00:14,278 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:02:11,800 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:02:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:02:11,801 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:02:11,801 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:02:11,802 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:02:11 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:02:11,802 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:02:11,802 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:02:12,440 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:02:12 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:02:12,441 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:02:12,441 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:02:12,442 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:02:12 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:02:12,443 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:02:12,443 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:02:23,151 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:02:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:02:23,152 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:02:23,152 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:02:23,153 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:02:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:02:23,153 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:02:23,153 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:02:24,082 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:02:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:02:24,083 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:02:24,083 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:02:24,084 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:02:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:02:24,084 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:02:24,084 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:02:38,497 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:02:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:02:38,498 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:02:38,498 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:02:38,499 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:02:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:02:38,499 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:02:38,499 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:02:39,096 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:02:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:02:39,098 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:02:39,098 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:02:39,100 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:02:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:02:39,101 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:02:39,102 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:23,940 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:23,941 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:23,941 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:23,942 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:23 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:23,943 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:23,943 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:24,635 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:24,637 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:24,637 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:24,638 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:24,639 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:24,639 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:24,670 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:24,671 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:24,671 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:24,672 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:24 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:24,672 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:24,672 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:25,596 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:25,596 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:25,596 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:25,597 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:25,597 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:25,597 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:25,607 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:25,608 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:25,608 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:25,608 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:25,609 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:25,609 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:25,610 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:25,611 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:25,611 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:25,612 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:25,612 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:25,612 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:25,627 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:25,628 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:25,628 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:25,629 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:25 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:25,629 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:25,629 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:26,138 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:26,138 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:26,138 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:26,139 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:26 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:26,139 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:26,139 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:38,158 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:38,158 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:38,159 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:38,160 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:38,160 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:38,160 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:38,938 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:38,938 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:38,939 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:38,940 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:38,940 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:38,940 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:38,952 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:38,953 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:38,953 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:38,954 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:38 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:38,954 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:38,954 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:39,585 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:39,586 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:39,587 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:39,588 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:39,588 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:39,589 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:39,612 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:39,613 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:39,613 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:39,614 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:39 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:39,615 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:39,615 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:40,179 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:40 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:40,180 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:40,180 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:40,181 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:40 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:40,181 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:40,182 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:49,596 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:49,598 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:49,598 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:49,599 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:49 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:49,599 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:49,599 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:50,292 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:50,293 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:50,293 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:50,295 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:50,296 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:50,296 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:50,313 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:50,314 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:50,314 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:50,314 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:50 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:50,315 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:50,315 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:51,051 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:51,053 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:51,053 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:51,054 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:51,055 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:51,055 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:51,076 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:51,077 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:51,077 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:51,077 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:51,078 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:51,078 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:51,649 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:51,649 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:51,649 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:51,650 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:51 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:51,650 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:51,650 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:52,349 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:52,349 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:52,349 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:52,350 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:52,350 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:52,350 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:52,351 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:52,352 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:52,352 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:52,352 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:52,353 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:52,353 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:52,705 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:52,705 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:52,706 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:52,706 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:52,707 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:52,707 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:52,707 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:52,708 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:04:52,708 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:04:52,708 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:04:52 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:04:52,709 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:04:52,709 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:09,718 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:09 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:09,719 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:05:09,719 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:09,720 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:09 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:09,720 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:05:09,720 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:10,353 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:10,353 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:05:10,354 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:10,354 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:10 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:10,355 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:05:10,355 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:21,269 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:21,270 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:05:21,270 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:21,271 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:21,271 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:05:21,272 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:21,998 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:21,999 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:05:21,999 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:22,000 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:21 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:22,001 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:05:22,001 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:29,127 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:29 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:29,128 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:05:29,128 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:29,129 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:29 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:29,130 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:05:29,130 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:29,738 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:29 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:29,738 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:05:29,738 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:29,739 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:29 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:29,740 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:05:29,740 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:33,277 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:33 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:33,278 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:05:33,278 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:33,279 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:33 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:33,279 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:05:33,279 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:33,866 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:33 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:33,867 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:05:33,867 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:05:33,869 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:05:33 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:05:33,869 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:05:33,869 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:11:33,838 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:11:33 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:11:33,838 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:11:33,839 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:11:33,839 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:11:33 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:11:33,840 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:11:33,840 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:11:34,527 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:11:34 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:11:34,527 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:11:34,527 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:11:34,527 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:11:34 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:11:34,529 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:11:34,529 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:11:34,545 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:11:34 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:11:34,546 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:11:34,546 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:11:34,547 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:11:34 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:11:34,548 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:11:34,548 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:11:35,078 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:11:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:11:35,078 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:11:35,079 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:11:35,080 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:11:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:11:35,080 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:11:35,080 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:11:35,685 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:11:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:11:35,685 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:11:35,685 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:11:35,686 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:11:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:11:35,687 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:11:35,687 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:11:36,308 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:11:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:11:36,308 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-20 21:11:36,308 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-20 21:11:36,309 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 20, 2026 9:11:36 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-20 21:11:36,310 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-20 21:11:36,310 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

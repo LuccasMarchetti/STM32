@@ -1,0 +1,44 @@
+/*
+ * ethernet_dns.c
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: Luccas
+ */
+#include "ethernet_dns.h"
+#include "w5500.h"
+
+void DNS_FSM(W5500_Driver_t *drv)
+{
+	switch (drv->dns.state)
+	{
+	case DNS_IDLE:
+		// Estado inicial, aguardando trigger para enviar consulta
+		break;
+
+	case DNS_SEND_QUERY:
+		// Enviar consulta DNS para drv->dns.dns_server
+		break;
+
+	case DNS_WAIT_RESPONSE:
+		// Aguardar resposta e processar quando chegar
+		break;
+
+	case DNS_DONE:
+		// Consulta resolvida com sucesso, IP disponível em drv->dns.resolved_ip
+		break;
+
+	case DNS_ERROR:
+		// Ocorreu um erro (timeout, resposta inválida, etc.)
+		break;
+	}
+}
+
+void DNS_HandleRx(W5500_Driver_t *drv, uint8_t *buf, uint16_t len)
+{
+	// Processar resposta DNS recebida no buffer
+	// Verificar se é a resposta para a consulta atual (transaction_id)
+	// Extrair o IP resolvido e salvar em drv->dns.resolved_ip
+
+	drv->sys_state = SYS_NET_NTP_RUNNING;
+	drv->ntp.state = NTP_SEND_REQUEST;
+}

@@ -1,0 +1,53 @@
+/*
+ * ethernet_dns.h
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: Luccas
+ */
+
+#ifndef SRC_ETHERNET_DNS_H_
+#define SRC_ETHERNET_DNS_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdint.h>
+#include <stdbool.h>
+
+#define DNS_TIMEOUT_MS 2000 // 2 segundos
+#define DNS_MAX_RETRIES 3
+
+// --- ESTADOS DO DNS ---
+typedef enum {
+    DNS_IDLE = 0,
+    DNS_SEND_QUERY,
+    DNS_WAIT_RESPONSE,
+    DNS_DONE,
+    DNS_ERROR
+} DNS_State_t;
+
+// --- ESTRUTURA DE CONTROLE DNS ---
+typedef struct {
+    DNS_State_t state;
+    uint8_t socket;
+    uint32_t t_start;       // Para timeout
+    uint8_t retries;        // Contador de tentativas
+    uint16_t transaction_id;// ID da mensagem atual
+
+    char target_domain[64]; // Ex: "pool.ntp.org"
+    uint8_t resolved_ip[4]; // Onde vamos salvar o IP que o DNS nos devolver
+    uint8_t dns_server[4];  // O servidor para onde mandar a pergunta (8.8.8.8 ou do DHCP)
+} DNS_Control_t;
+
+typedef struct W5500_Driver_t W5500_Driver_t;
+
+void DNS_FSM(W5500_Driver_t *drv);
+bool DNS_ParseResponse(uint8_t *buf, uint16_t len, uint8_t *resolved_ip, uint16_t expected_tx_id);
+void DNS_HandleRx(W5500_Driver_t *drv, uint8_t *buf, uint16_t len);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* SRC_ETHERNET_DNS_H_ */

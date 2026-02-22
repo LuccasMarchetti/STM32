@@ -1,0 +1,39 @@
+/*
+ * ethernet_mdns.h
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: Luccas
+ */
+
+#ifndef INC_ETHERNET_MDNS_H_
+#define INC_ETHERNET_MDNS_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdint.h>
+#include <stdbool.h>
+
+#define MDNS_PORT 5353
+#define MDNS_MULTICAST_IP0 224
+#define MDNS_MULTICAST_IP1 0
+#define MDNS_MULTICAST_IP2 0
+#define MDNS_MULTICAST_IP3 251
+
+
+typedef struct {
+	char *hostname;
+	char *service_type;
+	uint8_t socket;
+	uint16_t port;
+} mDNS_Service_t;
+
+uint8_t* format_mdns_name(uint8_t *buffer, const char *hostname);
+uint16_t build_mdns_response(uint8_t *buffer, const char *hostname, uint8_t *my_ip);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* INC_ETHERNET_MDNS_H_ */

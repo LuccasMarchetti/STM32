@@ -1,0 +1,15 @@
+2026-02-05 10:27:44,647 [INFO] Activator:176 - 
+
+
+2026-02-05 10:27:44,654 [INFO] Activator:177 - !SESSION log4j initialized
+2026-02-05 10:27:51,823 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2026-02-05 10:28:00,511 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 05, 2026 10:28:00 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-05 10:28:00,512 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: statusNotification
+2026-02-05 10:28:00,513 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-05 10:28:00,516 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 05, 2026 10:28:00 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-05 10:28:00,517 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: didChangeStatus
+2026-02-05 10:28:00,518 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-05 10:28:00,530 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] Feb 05, 2026 10:28:00 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+2026-02-05 10:28:00,532 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] ADVERTÊNCIA: Unsupported notification method: conversation/preconditionsNotification
+2026-02-05 10:28:00,532 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 
+2026-02-05 10:28:24,775 [ERROR] LogOutputStream:75 - [STDERR_REDIRECT] 

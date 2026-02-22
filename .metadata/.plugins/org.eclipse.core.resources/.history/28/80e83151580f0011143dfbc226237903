@@ -1,0 +1,95 @@
+/*
+ * ethernet_mdns.c
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: Luccas
+ */
+
+#include "ethernet_mdns.h"
+
+#include <string.h>
+
+bool is_mdns_query(uint8_t *buf, uint16_t len, const char *hostname) {
+	// Verifica se o IP é do mDNS
+	if (len < 12) {
+		return false; // Não é mDNS
+	}
+	if (buf[0] != MDNS_MULTICAST_IP0 || buf[1] != MDNS_MULTICAST_IP1 || buf[2] != MDNS_MULTICAST_IP2 || buf[3] != MDNS_MULTICAST_IP3) {
+		return false; // Não é mDNS
+	}
+	if (buf[4] != 53 || buf[5] != 53) {
+		return false; // Porta não é 5353
+	}
+	if (buf[8] != 0x00 || buf[9] != 0x00) {
+		return false; // Não é uma consulta (Flags não são 0)
+	}
+
+	// Verifica se é uma consulta para nosso hostname
+	// O nome do host no DNS é codificado como: [len][label]...[len][label]0
+	uint8_t *ptr = buf + 12; // Pula o cabeçalho DNS
+	uint8_t expected_len = strlen(hostname);
+
+	if (*ptr != expected_len) {
+		return false; // O comprimento do primeiro label não corresponde
+	}
+
+	ptr++; // Pula o byte de comprimento
+	if (memcmp(ptr, hostname, expected_len) != 0) {
+		return false; // O hostname não corresponde
+	}
+
+	ptr += expected_len; // Pula o hostname
+	if (*ptr != 5 || memcmp(ptr + 1, "local", 5) != 0) {
+		return false; // Não termina com "local"
+	}
+
+	return true; // É uma consulta mDNS para nosso hostname!
+}
+
+// Converte "hostname.local" para o formato DNS: "\x08hostname\x05local\x00"
+uint8_t* format_mdns_name(uint8_t *buffer, const char *hostname) {
+    uint8_t len = strlen(hostname);
+
+    *buffer++ = len; // Tamanho do hostname
+    memcpy(buffer, hostname, len);
+    buffer += len;
+
+    const char *local = "local";
+    *buffer++ = 5;   // Tamanho da palavra "local"
+    memcpy(buffer, local, 5);
+    buffer += 5;
+
+    *buffer++ = 0;   // Fim da string (Null terminator do DNS)
+    return buffer;
+}
+
+uint16_t build_mdns_response(uint8_t *buffer, const char *hostname, uint8_t *my_ip) {
+    uint8_t *ptr = buffer;
+
+    // 1. Cabeçalho (12 bytes)
+    *ptr++ = 0x00; *ptr++ = 0x00; // Transaction ID: 0
+    *ptr++ = 0x84; *ptr++ = 0x00; // Flags: Standard Query Response, No error
+    *ptr++ = 0x00; *ptr++ = 0x00; // Questions: 0
+    *ptr++ = 0x00; *ptr++ = 0x01; // Answers: 1
+    *ptr++ = 0x00; *ptr++ = 0x00; // Authority: 0
+    *ptr++ = 0x00; *ptr++ = 0x00; // Additional: 0
+
+    // 2. Nome do Dispositivo (ex: stm32g0.local)
+    ptr = format_mdns_name(ptr, hostname);
+
+    // 3. Informações do Registro (Type, Class, TTL, Length)
+    *ptr++ = 0x00; *ptr++ = 0x01; // Type: A (Host Address)
+    *ptr++ = 0x80; *ptr++ = 0x01; // Class: IN + Cache Flush
+
+    *ptr++ = 0x00; *ptr++ = 0x00; // TTL (4 bytes): 120 segundos
+    *ptr++ = 0x00; *ptr++ = 0x78;
+
+    *ptr++ = 0x00; *ptr++ = 0x04; // Data Length: 4 bytes (IPv4)
+
+    // 4. O seu endereço IP!
+    memcpy(ptr, my_ip, 4);
+    ptr += 4;
+
+    // Retorna o tamanho total do pacote para você passar pro W5500_SocketSend
+    return (uint16_t)(ptr - buffer);
+}

@@ -1,0 +1,45 @@
+/*
+ * ethernet_ntp.h
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: Luccas
+ */
+
+#ifndef ETHERNET_NTP_H_
+#define ETHERNET_NTP_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdint.h>
+
+// --- ESTADOS DO NTP ---
+typedef enum {
+    NTP_IDLE = 0,
+    NTP_SEND_REQUEST,
+    NTP_WAIT_RESPONSE,
+    NTP_DONE,
+    NTP_ERROR
+} NTP_State_t;
+
+// --- ESTRUTURA DE CONTROLE NTP ---
+typedef struct {
+    NTP_State_t state;
+    uint8_t socket;
+    uint32_t t_start;
+    uint8_t retries;
+
+    uint8_t server_ip[4];   // IP recebido do DNS
+    uint32_t current_unix_time; // Hora final resolvida
+} NTP_Control_t;
+
+void build_ntp_request(uint8_t *buffer);
+uint32_t parse_ntp_response(uint8_t *buffer, uint16_t len);
+uint16_t build_dns_query(uint8_t *buffer, const char *domain);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* ETHERNET_NTP_H_ */

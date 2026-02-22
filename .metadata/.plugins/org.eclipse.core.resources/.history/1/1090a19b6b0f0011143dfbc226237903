@@ -1,0 +1,13 @@
+/*
+ * ethernet_dns.h
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: Luccas
+ */
+
+#ifndef SRC_ETHERNET_DNS_H_
+#define SRC_ETHERNET_DNS_H_
+
+
+
+#endif /* SRC_ETHERNET_DNS_H_ */

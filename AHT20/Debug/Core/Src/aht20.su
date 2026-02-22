@@ -1,0 +1,8 @@
+../Core/Src/aht20.c:5:19:AHT20_ReleaseSemaphore	8	static
+../Core/Src/aht20.c:10:19:AHT20_Setup	8	static
+../Core/Src/aht20.c:19:19:AHT20_Init	24	static
+../Core/Src/aht20.c:34:19:AHT20_Reset	24	static
+../Core/Src/aht20.c:49:19:AHT20_CheckCalibration	24	static
+../Core/Src/aht20.c:64:19:AHT20_TriggerMeasurement	24	static
+../Core/Src/aht20.c:79:19:AHT20_ReadData	40	static
+../Core/Src/aht20.c:104:6:AHT20_Measure	8	static

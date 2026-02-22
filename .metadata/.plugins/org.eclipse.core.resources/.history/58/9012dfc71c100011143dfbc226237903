@@ -1,0 +1,133 @@
+/*
+ * ethernet_ntp.c
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: Luccas
+ */
+
+#include "ethernet_ntp.h"
+#include "w5500.h"
+#include <string.h>
+#include <stdint.h>
+
+void build_ntp_request(uint8_t *buffer) {
+    // Zera os 48 bytes
+    memset(buffer, 0, 48);
+
+    // Configura o primeiro byte (LI=0, VN=3, Mode=3)
+    buffer[0] = 0x1B;
+}
+
+// Retorna o Unix Timestamp (segundos desde 1970)
+uint32_t parse_ntp_response(uint8_t *buffer, uint16_t len) {
+    if (len < 48) {
+        return 0; // Pacote inválido
+    }
+
+    // Extrai os 4 bytes do tempo (A partir do índice 40)
+    // O NTP usa Big-Endian, então precisamos deslocar os bytes corretamente
+    uint32_t seconds_since_1900 = (buffer[40] << 24) |
+                                  (buffer[41] << 16) |
+                                  (buffer[42] << 8)  |
+                                   buffer[43];
+
+    // Converte de "Tempo NTP (1900)" para "Tempo Unix (1970)"
+    // 2.208.988.800 é a quantidade de segundos entre 1900 e 1970
+    uint32_t unix_timestamp = seconds_since_1900 - 2208988800U;
+
+    return unix_timestamp;
+}
+
+// Vamos reaproveitar a função que converte "pool.ntp.org"
+// para "\x04pool\x03ntp\x03org\x00"
+uint8_t* format_dns_name(uint8_t *buffer, const char *domain) {
+    char temp_domain[64];
+    strcpy(temp_domain, domain);
+
+    char *token = strtok(temp_domain, ".");
+    while (token != NULL) {
+        uint8_t len = strlen(token);
+        *buffer++ = len;
+        memcpy(buffer, token, len);
+        buffer += len;
+        token = strtok(NULL, ".");
+    }
+    *buffer++ = 0x00; // Terminador Nulo (Root)
+    return buffer;
+}
+
+uint16_t build_dns_query(uint8_t *buffer, const char *domain) {
+    uint8_t *ptr = buffer;
+
+    // 1. Cabeçalho (12 bytes)
+    *ptr++ = 0x12; *ptr++ = 0x34; // Transaction ID: Um número aleatório (ex: 0x1234)
+
+    // Flags: 0x0100 (Standard Query, Recursion Desired)
+    // "Recursion Desired" diz pro roteador: "Se você não souber o IP, pergunte pra outro servidor por mim"
+    *ptr++ = 0x01; *ptr++ = 0x00;
+
+    *ptr++ = 0x00; *ptr++ = 0x01; // Questions: 1
+    *ptr++ = 0x00; *ptr++ = 0x00; // Answers: 0
+    *ptr++ = 0x00; *ptr++ = 0x00; // Authority RRs: 0
+    *ptr++ = 0x00; *ptr++ = 0x00; // Additional RRs: 0
+
+    // 2. O Nome que estamos procurando (QNAME)
+    ptr = format_dns_name(ptr, domain);
+
+    // 3. Tipo e Classe
+    *ptr++ = 0x00; *ptr++ = 0x01; // QTYPE: Tipo A (Queremos o IP)
+    *ptr++ = 0x00; *ptr++ = 0x01; // QCLASS: IN (Internet)
+
+    // Retorna o tamanho da mensagem para você enviar via W5500
+    return (uint16_t)(ptr - buffer);
+}
+
+void NTP_FSM(W5500_Driver_t *drv) {
+	NTP_Control_t *ntp = &drv->ntp;
+
+	switch (ntp->state) {
+		case NTP_IDLE:
+			// Aguardando trigger para iniciar a consulta NTP
+			break;
+
+		case NTP_SEND_REQUEST:
+			// Construir e enviar a consulta NTP para o servidor
+			build_ntp_request(drv->sockets[ntp->socket].tx_buf);
+			W5500_SocketSend(drv, ntp->socket, drv->sockets[ntp->socket].tx_buf, 48);
+			ntp->t_start = HAL_GetTick();
+			ntp->state = NTP_WAIT_RESPONSE;
+			break;
+
+		case NTP_WAIT_RESPONSE:
+			// Aguardando resposta do servidor NTP
+			if (HAL_GetTick() - ntp->t_start > 5000) { // Timeout de 5 segundos
+				ntp->state = NTP_ERROR;
+			}
+			break;
+
+		case NTP_DONE:
+			// Hora resolvida com sucesso em ntp->current_unix_time
+			break;
+
+		case NTP_ERROR:
+			// Ocorreu um erro (timeout ou resposta inválida)
+			break;
+	}
+}
+
+void NTP_HandleRx(W5500_Driver_t *drv, uint8_t *buf, uint16_t len) {
+	NTP_Control_t *ntp = &drv->ntp;
+
+	if (ntp->state != NTP_WAIT_RESPONSE) {
+		return; // Não estamos esperando uma resposta NTP
+	}
+
+	uint32_t unix_time = parse_ntp_response(buf, len);
+	if (unix_time == 0) {
+		ntp->state = NTP_ERROR; // Resposta inválida
+	} else {
+		ntp->current_unix_time = unix_time;
+		ntp->state = NTP_DONE; // Hora resolvida com sucesso
+		drv->net_state = SYS_NET_READY;
+	}
+}

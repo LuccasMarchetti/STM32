@@ -1,0 +1,10 @@
+/*
+ * ethernet_dns.c
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: Luccas
+ */
+
+
+#include "ethernet_dns.h"
+

@@ -1,0 +1,14 @@
+../Core/Src/sht41.c:5:19:SHT41_ReleaseSemaphore	8	static
+../Core/Src/sht41.c:10:19:SHT41_Transmit	32	static
+../Core/Src/sht41.c:21:19:SHT41_Receive	32	static
+../Core/Src/sht41.c:32:19:SHT41_MemRead	40	static
+../Core/Src/sht41.c:43:19:SHT41_MemWrite	40	static
+../Core/Src/sht41.c:54:19:SHT41_CRC_Check	24	static
+../Core/Src/sht41.c:74:19:SHT41_Setup	8	static
+../Core/Src/sht41.c:83:19:SHT41_Reset	16	static
+../Core/Src/sht41.c:90:19:SHT41_ReadID	24	static
+../Core/Src/sht41.c:105:19:SHT41_ReadData	32	static
+../Core/Src/sht41.c:141:19:SHT41_ActivateHeater	32	static
+../Core/Src/sht41.c:172:19:SHT41_Init	8	static
+../Core/Src/sht41.c:178:19:SHT41_ConvertData	8	static
+../Core/Src/sht41.c:185:19:SHT41_ReadAndConvertData	16	static

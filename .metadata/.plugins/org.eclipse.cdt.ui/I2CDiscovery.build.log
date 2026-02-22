@@ -1,0 +1,10 @@
+10:15:51 **** Build of configuration Debug for project I2CDiscovery ****
+make -j8 all 
+arm-none-eabi-size  I2CDiscovery.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21140	     96	   9008	  30244	   7624	I2CDiscovery.elf
+Finished building: default.size.stdout
+ 
+
+10:15:52 Build Finished. 0 errors, 0 warnings. (took 451ms)
+

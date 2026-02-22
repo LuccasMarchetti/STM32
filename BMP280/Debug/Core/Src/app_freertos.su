@@ -1,0 +1,7 @@
+../Core/Src/app_freertos.c:82:6:MX_FREERTOS_Init	8	static
+../Core/Src/app_freertos.c:131:6:StartDefaultTask	16	static
+../Core/Src/app_freertos.c:149:6:HAL_I2C_MasterTxCpltCallback	16	static
+../Core/Src/app_freertos.c:156:6:HAL_I2C_MasterRxCpltCallback	16	static
+../Core/Src/app_freertos.c:163:6:HAL_I2C_MemRxCpltCallback	16	static
+../Core/Src/app_freertos.c:169:6:HAL_I2C_MemTxCpltCallback	16	static
+../Core/Src/app_freertos.c:176:6:HAL_I2C_ErrorCallback	16	static

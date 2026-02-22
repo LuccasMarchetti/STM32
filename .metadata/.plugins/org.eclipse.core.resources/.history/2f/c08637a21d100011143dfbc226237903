@@ -1,0 +1,79 @@
+/*
+ * ethernet_dns.c
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: Luccas
+ */
+#include "ethernet_dns.h"
+#include "w5500.h"
+
+void DNS_FSM(W5500_Driver_t *drv) {
+    DNS_Control_t *dns = &drv->dns;
+
+    switch (dns->state) {
+        case DNS_IDLE:
+            // Configurações iniciais feitas na transição do DHCP
+            break;
+
+        case DNS_SEND_QUERY:
+            if (dns->socket == 0xFF) {
+                // Abre um socket UDP dinâmico (ex: porta 50053)
+                dns->socket = W5500_OpenSocket(drv, W5500_Sn_MR_UDP, 50053);
+            }
+
+            // Incrementa o ID da transação
+            dns->transaction_id++;
+
+            // Monta e envia o pacote DNS (usando aquela função build_dns_query)
+            DNS_SendQuery(drv);
+
+            dns->t_start = HAL_GetTick();
+            dns->state = DNS_WAIT_RESPONSE;
+            break;
+
+        case DNS_WAIT_RESPONSE:
+            if ((HAL_GetTick() - dns->t_start) >= DNS_TIMEOUT_MS) {
+                dns->retries++;
+                if (dns->retries >= DNS_MAX_RETRIES) {
+                    dns->state = DNS_ERROR; // Falhou de vez
+                    W5500_CloseSocket(drv, dns->socket);
+                    dns->socket = 0xFF;
+                } else {
+                    dns->state = DNS_SEND_QUERY; // Tenta de novo
+                }
+            }
+            break;
+
+        case DNS_DONE:
+            // Fica aqui aguardando. O RX_Handle que joga pra cá!
+            break;
+
+        case DNS_ERROR:
+            // Tratamento de erro (ex: tentar outro IP de DNS)
+            break;
+    }
+}
+
+void DNS_HandleRx(W5500_Driver_t *drv, uint8_t *buf, uint16_t len) {
+    DNS_Control_t *dns = &drv->dns;
+
+    // Verifica se o Transaction ID bate e faz o parse da resposta
+    // (Vamos escrever a lógica de parse do DNS na próxima etapa)
+    bool sucesso = DNS_ParseResponse(buf, len, dns->resolved_ip, dns->transaction_id);
+
+    if (sucesso) {
+        // 1. Encerra o DNS
+        dns->state = DNS_DONE;
+        W5500_CloseSocket(drv, dns->socket);
+        dns->socket = 0xFF;
+
+        // 2. Prepara e Acorda o NTP!
+        drv->net_state = SYS_NET_NTP_RUNNING;
+
+        // Copia o IP que acabamos de descobrir para a FSM do NTP
+        memcpy(drv->ntp.server_ip, dns->resolved_ip, 4);
+
+        drv->ntp.retries = 0;
+        drv->ntp.state = NTP_SEND_REQUEST;
+    }
+}

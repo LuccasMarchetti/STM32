@@ -1,0 +1,13 @@
+/*
+ * mDNS.c
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: Luccas
+ */
+
+#include "mDNS.h"
+
+void mDNS_AdvertiseService(mDNS_Service_t *service) {
+	// Placeholder for mDNS advertisement logic
+	// This function would construct and send mDNS packets to advertise the service
+}

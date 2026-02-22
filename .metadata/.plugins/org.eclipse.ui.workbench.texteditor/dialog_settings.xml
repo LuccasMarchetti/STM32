@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="true"/>
+	<list key="replacehistory">
+		<item value="ETHERNET"/>
+		<item value="w5500-&gt;"/>
+		<item value="MR"/>
+		<item value="spi"/>
+		<item value="w5500"/>
+		<item value="W5500"/>
+		<item value="SHT41"/>
+		<item value="sht41"/>
+		<item value="MemRead"/>
+		<item value="bmp280"/>
+		<item value="BMP280"/>
+		<item value="aht20."/>
+		<item value="AHT20"/>
+		<item value="aht20-&gt;"/>
+	</list>
+	<list key="searchhistory">
+		<item value="transmit"/>
+		<item value="W5500_ReadCommonIMR"/>
+		<item value="interr"/>
+		<item value="bufferSema"/>
+		<item value="W5500_ReleaseSemaphore"/>
+		<item value="semap"/>
+		<item value="socketTask"/>
+		<item value="W5500_OpenSocket"/>
+		<item value="MACRAW"/>
+		<item value="Interrupt"/>
+		<item value="SOCKET"/>
+		<item value="W5500"/>
+		<item value="version"/>
+		<item value="reaD"/>
+		<item value="rst"/>
+	</list>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="XferISR"/>
+		<list key="findhistory">
+			<item value="XferISR"/>
+		</list>
+	</section>
+</section>

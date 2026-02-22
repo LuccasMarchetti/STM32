@@ -1,0 +1,429 @@
+#include <ethernet_dhcp.h>
+#include <w5500.h>
+#include <stdbool.h>
+
+HAL_StatusTypeDef W5500_ReleaseSemaphore(W5500_HandleTypeDef * w5500) {
+	// Release I2C semaphore
+	return osSemaphoreRelease(w5500->spiSemaphore);
+}
+
+HAL_StatusTypeDef W5500_Transmit(W5500_HandleTypeDef * w5500, uint8_t * cmd, uint16_t size) {
+	HAL_StatusTypeDef ret;
+	osSemaphoreAcquire(w5500->spiSemaphore, osWaitForever);
+
+	ret = HAL_SPI_Transmit_DMA(w5500->hspi, cmd, size);
+
+	osSemaphoreAcquire(w5500->spiSemaphore, osWaitForever); // Wait for transmission to complete
+	osSemaphoreRelease(w5500->spiSemaphore); // Release semaphore
+	return ret;
+}
+
+HAL_StatusTypeDef W5500_Receive(W5500_HandleTypeDef * w5500, uint8_t * cmd, uint8_t * data, uint16_t size) {
+	HAL_StatusTypeDef ret;
+	osSemaphoreAcquire(w5500->spiSemaphore, osWaitForever);
+
+	ret = HAL_SPI_TransmitReceive_DMA(w5500->hspi, cmd, data, size);
+
+	osSemaphoreAcquire(w5500->spiSemaphore, osWaitForever); // Wait for reception to complete
+	osSemaphoreRelease(w5500->spiSemaphore); // Release semaphore
+	return ret;
+}
+
+HAL_StatusTypeDef W5500_Setup(W5500_HandleTypeDef * w5500){
+
+	if (w5500->hspi == NULL || w5500->spiSemaphore == NULL) {
+		return HAL_ERROR;
+	}
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_Reset(W5500_HandleTypeDef * w5500) {
+
+	w5500->tx[0] = (W5500_COMMON_MR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_MR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	w5500->tx[3] = W5500_COMMON_MR_RST;
+
+	return W5500_Transmit(w5500, w5500->tx, 4);
+}
+
+HAL_StatusTypeDef W5500_PHYReset(W5500_HandleTypeDef * w5500) {
+
+	w5500->tx[0] = (W5500_COMMON_PHYCFGR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_PHYCFGR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	w5500->tx[3] = W5500_COMMON_PHYCFGR_OPMD_OPMDC | W5500_COMMON_PHYCFGR_ALL_CAPABLE_AUTO_NEGOTIATION_ENABLED;
+
+	W5500_Transmit(w5500, w5500->tx, 4);
+
+	w5500->tx[0] = (W5500_COMMON_PHYCFGR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_PHYCFGR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	w5500->tx[3] = W5500_COMMON_PHYCFGR_RST | W5500_COMMON_PHYCFGR_OPMD_OPMDC | W5500_COMMON_PHYCFGR_ALL_CAPABLE_AUTO_NEGOTIATION_ENABLED;
+
+	return W5500_Transmit(w5500, w5500->tx, 4);
+}
+
+HAL_StatusTypeDef W5500_ReadVERSIONR(W5500_HandleTypeDef * w5500) {
+
+	w5500->tx[0] = (W5500_COMMON_VERSIONR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_VERSIONR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	W5500_Receive(w5500, w5500->tx, w5500->rx, 4);
+
+	if (w5500->rx[3] != W5500_COMMON_VERSIONR_VALUE) {
+		return HAL_ERROR;
+	}
+	w5500->versionr = w5500->rx[3];
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_GenerateMAC(W5500_HandleTypeDef * w5500){
+	// Get Unique ID for generate MAC Address
+	uint32_t uid[3];
+	uid[0] = HAL_GetUIDw0();
+	uid[1] = HAL_GetUIDw1();
+	uid[2] = HAL_GetUIDw2();
+
+	// Generate MAC Hash from UID
+	uint32_t mac_hash = uid[0] ^ uid[1] ^ uid[2];
+
+	w5500->MAC[0] = 0x02; // 0x02 = Locally Administered & Unicast
+	w5500->MAC[1] = uid[0]  & 0xFF;
+	w5500->MAC[2] = (mac_hash >> 24) & 0xFF;
+	w5500->MAC[3] = (mac_hash >> 16) & 0xFF;
+	w5500->MAC[4] = (mac_hash >> 8)  & 0xFF;
+	w5500->MAC[5] = (mac_hash >> 0)  & 0xFF;
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_SetMAC(W5500_HandleTypeDef * w5500) {
+
+	w5500->tx[0] = (W5500_COMMON_SHAR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_SHAR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	memcpy(&w5500->tx[3], w5500->MAC, W5500_COMMON_SHAR_LEN);
+
+	return W5500_Transmit(w5500, w5500->tx, 3 + W5500_COMMON_SHAR_LEN);
+}
+
+HAL_StatusTypeDef W5500_ReadMAC(W5500_HandleTypeDef * w5500) {
+
+	w5500->tx[0] = (W5500_COMMON_SHAR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_SHAR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	return W5500_Receive(w5500, w5500->tx, w5500->rx, 3 + W5500_COMMON_SHAR_LEN);
+}
+
+HAL_StatusTypeDef W5500_SetIP(W5500_HandleTypeDef * w5500){
+	w5500->tx[0] = (W5500_COMMON_SIPR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_SIPR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	memcpy(&w5500->tx[3], w5500->IP, W5500_COMMON_SIPR_LEN);
+
+	return W5500_Receive(w5500, w5500->tx, w5500->rx, 3 + W5500_COMMON_SIPR_LEN);
+}
+
+HAL_StatusTypeDef W5500_SetGATEWAY(W5500_HandleTypeDef * w5500){
+	w5500->tx[0] = (W5500_COMMON_GAR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_GAR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	memcpy(&w5500->tx[3], w5500->GATEWAY, W5500_COMMON_GAR_LEN);
+
+	return W5500_Transmit(w5500, w5500->tx, 3 + W5500_COMMON_GAR_LEN);
+}
+
+HAL_StatusTypeDef W5500_SetSUBNET(W5500_HandleTypeDef * w5500){
+	w5500->tx[0] = (W5500_COMMON_SUBR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_SUBR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	memcpy(&w5500->tx[3], w5500->SUBNET, W5500_COMMON_GAR_LEN);
+
+	return W5500_Transmit(w5500, w5500->tx, 3 + W5500_COMMON_SUBR_LEN);
+}
+
+HAL_StatusTypeDef W5500_ReadCommonIMR(W5500_HandleTypeDef * w5500, uint8_t * imr) {
+	w5500->tx[0] = (W5500_COMMON_IMR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_IMR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	if (W5500_Receive(w5500, w5500->tx, w5500->rx, 4) != HAL_OK) {
+		return HAL_ERROR;
+	}
+
+	imr = &w5500->rx[3];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ConfigureCommonIMR(W5500_HandleTypeDef * w5500, uint8_t imr, bool clear) {
+
+	if (!clear) {
+		uint8_t current_imr;
+		if (W5500_ReadCommonIMR(w5500, &current_imr) != HAL_OK) {
+			return HAL_ERROR;
+		}
+		imr = current_imr | imr;
+	}
+	w5500->tx[0] = (W5500_COMMON_IMR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_IMR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	w5500->tx[3] = imr;
+
+	return W5500_Transmit(w5500, w5500->tx, 4);
+}
+
+HAL_StatusTypeDef W5500_ReadCommonSocketIMR(W5500_HandleTypeDef * w5500, uint8_t * imr) {
+	w5500->tx[0] = (W5500_COMMON_SIMR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_SIMR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	if (W5500_Receive(w5500, w5500->tx, w5500->rx, 4) != HAL_OK) {
+		return HAL_ERROR;
+	}
+
+	imr = &w5500->rx[3];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ConfigureCommonSocketIMR(W5500_HandleTypeDef * w5500, uint8_t imr, bool clear) {
+	if (!clear) {
+		uint8_t current_imr;
+		if (W5500_ReadCommonSocketIMR(w5500, &current_imr) != HAL_OK) {
+			return HAL_ERROR;
+		}
+		imr = current_imr | imr;
+	}
+	w5500->tx[0] = (W5500_COMMON_SIMR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_SIMR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	w5500->tx[3] = imr;
+
+	return W5500_Transmit(w5500, w5500->tx, 4);
+}
+
+HAL_StatusTypeDef W5500_ReadCommonSocketIR(W5500_HandleTypeDef * w5500, uint8_t * ir) {
+	w5500->tx[0] = (W5500_COMMON_SIR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_SIR & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	if (W5500_Receive(w5500, w5500->tx, w5500->rx, 4) != HAL_OK) {
+		return HAL_ERROR;
+	}
+
+	imr = &w5500->rx[3];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ReadSocketIR(W5500_HandleTypeDef * w5500, uint8_t socket, uint8_t * ir) {
+	w5500->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	w5500->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	w5500->tx[2] = W5500_Sn_IR | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	if (W5500_Receive(w5500, w5500->tx, w5500->rx, 4) != HAL_OK) {
+		return HAL_ERROR;
+	}
+
+	ir = &w5500->rx[3];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ClearSocketIR(W5500_HandleTypeDef * w5500, uint8_t socket, uint8_t * ir) {
+	if (ir == NULL) {
+		ir = 0xFF;
+	}
+	w5500->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	w5500->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	w5500->tx[2] = W5500_Sn_IR | W5500_RWB_READ | W5500_OPCODE_VDM;
+	w5500->tx[3] = *ir;
+
+	return W5500_Transmit(w5500, w5500->tx, 4);
+}
+
+HAL_StatusTypeDef W5500_ReadUnreachIPPort(W5500_HandleTypeDef * w5500, uint8_t * ip, uint8_t * port) {
+	w5500->tx[0] = (W5500_COMMON_UIPR >> 8) & 0xFF;
+	w5500->tx[1] = W5500_COMMON_UIPR(socket) & 0xFF;
+	w5500->tx[2] = W5500_BSB_COMMON | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	if (W5500_Receive(w5500, w5500->tx, w5500->rx, 3 + W5500_COMMON_UIPR_LEN + W5500_COMMON_UPORTR_LEN) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	memcpy(ip, &w5500->rx[3], W5500_COMMON_UIPR_LEN);
+	memcpy(port, &w5500->rx[3 + W5500_COMMON_UIPR_LEN], W5500_COMMON_UPORTR_LEN);
+
+	return HAL_OK;
+}
+
+
+uint8_t W5500_OpenSocket(W5500_HandleTypeDef * w5500, uint8_t protocol, uint16_t port) {
+
+	uint8_t socket = 0;
+
+	if (protocol == W5500_Sn_MR_MACRAW) {
+		socket = 0;
+	} else {
+		for (socket = W5500_MAX_SOCKETS-1; socket > 0 ; socket--) {
+			if ((w5500->used_sockets & (1 << socket)) == 0) {
+				w5500->used_sockets |= (1 << socket);
+				break;
+			}
+		}
+	}
+
+	w5500->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	w5500->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	w5500->tx[2] = W5500_Sn_MR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	w5500->tx[3] = protocol;
+
+	w5500->socket_cfg[socket].mode = protocol;
+
+	W5500_Transmit(w5500, w5500->tx, 4);
+
+	w5500->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	w5500->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	w5500->tx[2] = W5500_Sn_CR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	w5500->tx[3] = W5500_Sn_CR_OPEN;
+
+	W5500_Transmit(w5500, w5500->tx, 4);
+
+	w5500->socket_cfg[socket].source_port[0] = port >> 8;
+	w5500->socket_cfg[socket].source_port[1] = port & 0xFF;
+
+	w5500->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	w5500->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	w5500->tx[2] = W5500_Sn_PORT | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	w5500->tx[3] = (w5500->socket_cfg[socket].source_port[0] >> 8) & 0xFF;
+	w5500->tx[4] = w5500->socket_cfg[socket].source_port[1] & 0xFF;
+
+	W5500_Transmit(w5500, w5500->tx, 5);
+
+	return socket;
+}
+
+HAL_StatusTypeDef W5500_CloseSocket(W5500_HandleTypeDef * w5500, uint8_t socket) {
+
+	w5500->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	w5500->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	w5500->tx[2] = W5500_Sn_CR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	w5500->tx[3] = W5500_Sn_CR_CLOSE;
+
+	HAL_StatusTypeDef ret = W5500_Transmit(w5500, w5500->tx, 4);
+
+	w5500->used_sockets &= ~(1 << socket);
+
+	return ret;
+}
+
+HAL_StatusTypeDef W5500_SetSocketDestIP(W5500_HandleTypeDef * w5500, uint8_t socket, uint8_t * ip) {
+
+	w5500->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	w5500->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	w5500->tx[2] = W5500_Sn_DIPR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	memcpy(&w5500->tx[3], ip, 4);
+
+	return W5500_Transmit(w5500, w5500->tx, 7);
+}
+
+HAL_StatusTypeDef W5500_SetSocketDestPort(W5500_HandleTypeDef * w5500, uint8_t socket, uint16_t port) {
+
+	w5500->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	w5500->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	w5500->tx[2] = W5500_Sn_DPORT | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	w5500->tx[3] = (port >> 8) & 0xFF;
+	w5500->tx[4] = port & 0xFF;
+
+	return W5500_Transmit(w5500, w5500->tx, 5);
+}
+
+HAL_StatusTypeDef W5500_SetSocketDestMAC(W5500_HandleTypeDef * w5500, uint8_t socket, uint8_t * mac) {
+
+	w5500->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	w5500->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	w5500->tx[2] = W5500_Sn_DHAR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	memcpy(&w5500->tx[3], mac, 6);
+
+	return W5500_Transmit(w5500, w5500->tx, 9);
+}
+
+HAL_StatusTypeDef W5500_PrepareSocketData(W5500_HandleTypeDef * w5500, uint8_t socket, uint8_t * data, uint16_t size) {
+	w5500->tx[0] = (W5500_BSB_SOCKET_TX(socket) >> 8) & 0xFF;
+	w5500->tx[1] = W5500_BSB_SOCKET_TX(socket) & 0xFF;
+	w5500->tx[2] = W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	memcpy(&w5500->tx[3], data, size);
+
+	return W5500_Transmit(w5500, w5500->tx, 3 + size);
+}
+
+HAL_StatusTypeDef W5500_FlushTxBufferInSocketData(W5500_HandleTypeDef * w5500, uint8_t socket, uint16_t size) {
+	w5500->tx[0] = (W5500_BSB_SOCKET_TX(socket) >> 8) & 0xFF;
+	w5500->tx[1] = W5500_BSB_SOCKET_TX(socket) & 0xFF;
+	w5500->tx[2] = W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	return W5500_Transmit(w5500, w5500->tx, 3 + size);
+}
+
+HAL_StatusTypeDef W5500_SendSocket(W5500_HandleTypeDef * w5500, uint8_t socket, uint8_t * mac = NULL) {
+	w5500->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	w5500->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	w5500->tx[2] = W5500_Sn_CR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	w5500->tx[3] = (mac == NULL ? W5500_Sn_CR_SEND : W5500_Sn_CR_SEND_MAC);
+
+	return W5500_Transmit(w5500, w5500->tx, 4);
+}
+
+HAL_StatusTypeDef W5500_ReadSocketData(W5500_HandleTypeDef * w5500, uint8_t socket, uint8_t size) {
+	w5500->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	w5500->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	w5500->tx[2] = W5500_Sn_CR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	return W5500_Receive(w5500, w5500->tx, 3 + size);
+}
+
+HAL_StatusTypeDef W5500_DHCPDiscovery(W5500_HandleTypeDef * w5500){
+	if (w5500->IP[0] != 0 || w5500->IP[1] != 0 || w5500->IP[2] != 0 || w5500->IP[3] != 0) {
+		W5500_SetIP(w5500);
+	}
+	if (w5500->GATEWAY[0] != 0 || w5500->GATEWAY[1] != 0 || w5500->GATEWAY[2] != 0 || w5500->GATEWAY[3] != 0) {
+		W5500_SetGATEWAY(w5500);
+	}
+	if (w5500->SUBNET[0] != 0 || w5500->SUBNET[1] != 0 || w5500->SUBNET[2] != 0 || w5500->SUBNET[3] != 0) {
+		W5500_SetSUBNET(w5500);
+	}
+
+	uint8_t socket = W5500_OpenSocket(w5500, W5500_Sn_MR_UDP, DHCP_CLIENT_PORT);
+
+	W5500_SetSocketDestPort(w5500, socket, DHCP_SERVER_PORT);
+	uint8_t dest_ip[4] = {255, 255, 255, 255};
+	W5500_SetSocketDestIP(w5500, socket, dest_ip);
+	uint8_t dest_mac[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+	W5500_SetSocketDestMAC(w5500, socket, dest_mac);
+	memset(&w5500->tx[3], 0, 1024 - 3); // Clear TX buffer
+
+	return W5500_Transmit(w5500, w5500->tx, 3 + W5500_COMMON_SUBR_LEN);
+}
+
+HAL_StatusTypeDef W5500_Init(W5500_HandleTypeDef * w5500) {
+	W5500_Reset(w5500);
+	W5500_ReadVERSIONR(w5500);
+	W5500_GenerateMAC(w5500);
+	W5500_SetMAC(w5500);
+	W5500_ReadMAC(w5500);
+	W5500_SetIP(w5500);
+	W5500_SetGATEWAY(w5500);
+	W5500_SetSUBNET(w5500);
+	W5500_PHYReset(w5500);
+	return HAL_OK;
+}

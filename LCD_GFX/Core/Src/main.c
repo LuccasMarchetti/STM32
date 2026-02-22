@@ -18,9 +18,13 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "crc.h"
+#include "dma.h"
+#include "dma2d.h"
 #include "spi.h"
 #include "tim.h"
 #include "gpio.h"
+#include "app_touchgfx.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -92,55 +96,26 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_SPI4_Init();
   MX_TIM1_Init();
+  MX_DMA2D_Init();
+  MX_CRC_Init();
+  MX_TIM2_Init();
+  MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
-  lcd_init();
-  
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);
-
   while (1)
   {
-    lcd_fill_rgb565(0xF800); // vermelho
-    // Lógica para aumentar e diminuir o backlight
-    for (uint32_t d = 0; d <= htim1.Init.Period; d += 512) {
-        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, d);
-        HAL_Delay(5);
-    }
-    for (int32_t d = htim1.Init.Period; d >= 0; d -= 512) {
-        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, d);
-        HAL_Delay(5);
-    }
-    lcd_fill_rgb565(0x001F); // azul
-
-     // Lógica para aumentar e diminuir o backlight
-    for (uint32_t d = 0; d <= htim1.Init.Period; d += 512) {
-        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, d);
-        HAL_Delay(5);
-    }
-    for (int32_t d = htim1.Init.Period; d >= 0; d -= 512) {
-        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, d);
-        HAL_Delay(5);
-    }
-
-    lcd_fill_rgb565(0x07E0); // verde
-
-    for (uint32_t d = 0; d <= htim1.Init.Period; d += 512) {
-        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, d);
-        HAL_Delay(5);
-    }
-    for (int32_t d = htim1.Init.Period; d >= 0; d -= 512) {
-        __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, d);
-        HAL_Delay(5);
-    }
     /* USER CODE END WHILE */
 
+  MX_TouchGFX_Process();
     /* USER CODE BEGIN 3 */
-    }
+  }
   /* USER CODE END 3 */
 }
 
@@ -159,7 +134,7 @@ void SystemClock_Config(void)
 
   /** Configure the main internal regulator output voltage
   */
-  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE3);
+  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
 
   while(!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
 
@@ -169,7 +144,16 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
   RCC_OscInitStruct.HSIState = RCC_HSI_DIV1;
   RCC_OscInitStruct.HSICalibrationValue = 64;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = 4;
+  RCC_OscInitStruct.PLL.PLLN = 12;
+  RCC_OscInitStruct.PLL.PLLP = 1;
+  RCC_OscInitStruct.PLL.PLLQ = 2;
+  RCC_OscInitStruct.PLL.PLLR = 2;
+  RCC_OscInitStruct.PLL.PLLRGE = RCC_PLL1VCIRANGE_3;
+  RCC_OscInitStruct.PLL.PLLVCOSEL = RCC_PLL1VCOWIDE;
+  RCC_OscInitStruct.PLL.PLLFRACN = 4096;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -180,8 +164,8 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2
                               |RCC_CLOCKTYPE_D3PCLK1|RCC_CLOCKTYPE_D1PCLK1;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_HSI;
-  RCC_ClkInitStruct.SYSCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.SYSCLKDivider = RCC_SYSCLK_DIV2;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB3CLKDivider = RCC_APB3_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_APB1_DIV1;

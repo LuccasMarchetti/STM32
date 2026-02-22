@@ -1,0 +1,61 @@
+/*
+ * ethernet_mdns.h
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: Luccas
+ */
+
+#ifndef INC_ETHERNET_MDNS_H_
+#define INC_ETHERNET_MDNS_H_
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#include <stdint.h>
+#include <stdbool.h>
+#include "main.h"
+
+/* forward declaration para evitar inclusão circular com w5500.h */
+struct W5500_Driver_t;
+
+#define MDNS_PORT 5353
+
+#define MDNS_MULTICAST_IP0 224
+#define MDNS_MULTICAST_IP1 0
+#define MDNS_MULTICAST_IP2 0
+#define MDNS_MULTICAST_IP3 251
+
+#define MDNS_MULTICAST_MAC0 0x01
+#define MDNS_MULTICAST_MAC1 0x00
+#define MDNS_MULTICAST_MAC2 0x5E
+#define MDNS_MULTICAST_MAC3 0x00
+#define MDNS_MULTICAST_MAC4 0x00
+#define MDNS_MULTICAST_MAC5 0xFB
+
+typedef enum {
+    MDNS_IGNORE = 0,    // Não é pra gente ou é pacote inválido
+    MDNS_REQ_A  = 1,    // Alguém quer saber nosso IP (Tipo A)
+    MDNS_REQ_PTR = 2    // Alguém quer saber nosso Nome (Tipo PTR)
+} MDNS_Request_Type;
+
+typedef struct {
+	char *hostname;
+	char *service_type;
+	uint8_t socket;
+	uint16_t port;
+} mDNS_Service_t;
+
+uint8_t* format_mdns_name(uint8_t *buffer, const char *hostname);
+uint16_t build_mdns_response_A(uint8_t *buffer, const char *hostname, uint8_t *my_ip);
+uint16_t build_mdns_response_PTR(uint8_t *buffer, const char *hostname, uint8_t *my_ip);
+MDNS_Request_Type mdns_parse_query(uint8_t *buf, uint16_t len, const char *hostname, uint8_t *my_ip);
+
+HAL_StatusTypeDef W5500_mDNS_Start(struct W5500_Driver_t *drv);
+void W5500_mDNS_HandleRx(struct W5500_Driver_t *drv, uint8_t *buf, uint16_t len);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* INC_ETHERNET_MDNS_H_ */

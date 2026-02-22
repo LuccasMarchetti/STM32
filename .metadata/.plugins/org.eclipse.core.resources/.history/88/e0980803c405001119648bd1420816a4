@@ -1,0 +1,881 @@
+#include <ethernet_dhcp.h>
+#include <w5500.h>
+#include "cmsis_os.h"
+
+HAL_StatusTypeDef W5500_Transmit(W5500_Driver_t * drv, uint8_t * cmd, uint16_t size) {
+
+	osMutexAcquire(drv->spiBusMutex, osWaitForever);
+
+	HAL_StatusTypeDef ret = HAL_SPI_Transmit_DMA(drv->hspi, cmd, size);
+
+	osSemaphoreAcquire(drv->spiDoneSem, osWaitForever); // Wait for reception to complete
+
+	osMutexRelease(drv->spiBusMutex); // Release mutex
+
+	return ret;
+}
+
+HAL_StatusTypeDef W5500_Receive(W5500_Driver_t * drv, uint8_t * tx, uint8_t * rx, uint16_t size) {
+
+	osMutexAcquire(drv->spiBusMutex, osWaitForever);
+
+	HAL_StatusTypeDef ret = HAL_SPI_TransmitReceive_DMA(drv->hspi, tx, rx, size);
+
+	osSemaphoreAcquire(drv->spiDoneSem, osWaitForever); // Wait for reception to complete
+
+	osMutexRelease(drv->spiBusMutex); // Release mutex
+
+	return ret;
+}
+
+HAL_StatusTypeDef W5500_Setup(W5500_Driver_t * drv){
+
+	if (drv->hspi == NULL || drv->spiBusMutex == NULL) {
+		return HAL_ERROR;
+	}
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_Reset(W5500_Driver_t * drv) {
+
+	drv->tx[0] = (W5500_COMMON_MR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_MR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = W5500_COMMON_MR_RST;
+
+	W5500_Transmit(drv, drv->tx, 4);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_PHYReset(W5500_Driver_t * drv) {
+
+	drv->tx[0] = (W5500_COMMON_PHYCFGR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_PHYCFGR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = W5500_COMMON_PHYCFGR_OPMD_OPMDC | W5500_COMMON_PHYCFGR_ALL_CAPABLE_AUTO_NEGOTIATION_ENABLED;
+
+	W5500_Transmit(drv, drv->tx, 4);
+
+	drv->tx[0] = (W5500_COMMON_PHYCFGR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_PHYCFGR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = W5500_COMMON_PHYCFGR_RST | W5500_COMMON_PHYCFGR_OPMD_OPMDC | W5500_COMMON_PHYCFGR_ALL_CAPABLE_AUTO_NEGOTIATION_ENABLED;
+
+	W5500_Transmit(drv, drv->tx, 4);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ReadVERSIONR(W5500_Driver_t * drv) {
+
+	drv->tx[0] = (W5500_COMMON_VERSIONR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_VERSIONR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	W5500_Receive(drv, drv->tx, drv->rx, 4);
+
+	if (drv->rx[3] != W5500_COMMON_VERSIONR_VALUE) {
+		return HAL_ERROR;
+	}
+	drv->versionr = drv->rx[3];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_GenerateMAC(W5500_Driver_t * drv){
+	// Get Unique ID for generate MAC Address
+	uint32_t uid[3];
+	uid[0] = HAL_GetUIDw0();
+	uid[1] = HAL_GetUIDw1();
+	uid[2] = HAL_GetUIDw2();
+
+	// Generate MAC Hash from UID
+	uint32_t mac_hash = uid[0] ^ uid[1] ^ uid[2];
+
+	drv->MAC[0] = 0x02; // 0x02 = Locally Administered & Unicast
+	drv->MAC[1] = uid[0]  & 0xFF;
+	drv->MAC[2] = (mac_hash >> 24) & 0xFF;
+	drv->MAC[3] = (mac_hash >> 16) & 0xFF;
+	drv->MAC[4] = (mac_hash >> 8)  & 0xFF;
+	drv->MAC[5] = (mac_hash >> 0)  & 0xFF;
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_SetMAC(W5500_Driver_t * drv) {
+
+	drv->tx[0] = (W5500_COMMON_SHAR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_SHAR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	memcpy(&drv->tx[3], drv->MAC, W5500_COMMON_SHAR_LEN);
+
+	W5500_Transmit(drv, drv->tx, 3 + W5500_COMMON_SHAR_LEN);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ReadMAC(W5500_Driver_t * drv, uint8_t * mac) {
+
+	drv->tx[0] = (W5500_COMMON_SHAR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_SHAR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	W5500_Receive(drv, drv->tx, drv->rx, 3 + W5500_COMMON_SHAR_LEN);
+
+	memcpy(mac, &drv->rx[3], W5500_COMMON_SHAR_LEN);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_SetIP(W5500_Driver_t * drv){
+
+	drv->tx[0] = (W5500_COMMON_SIPR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_SIPR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	memcpy(&drv->tx[3], drv->IP, W5500_COMMON_SIPR_LEN);
+
+	W5500_Transmit(drv, drv->tx, 3 + W5500_COMMON_SIPR_LEN);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_SetGATEWAY(W5500_Driver_t * drv){
+
+	drv->tx[0] = (W5500_COMMON_GAR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_GAR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	memcpy(&drv->tx[3], drv->GATEWAY, W5500_COMMON_GAR_LEN);
+
+	W5500_Transmit(drv, drv->tx, 3 + W5500_COMMON_GAR_LEN);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_SetSUBNET(W5500_Driver_t * drv){
+
+	drv->tx[0] = (W5500_COMMON_SUBR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_SUBR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	memcpy(&drv->tx[3], drv->SUBNET, W5500_COMMON_GAR_LEN);
+
+	W5500_Transmit(drv, drv->tx, 3 + W5500_COMMON_SUBR_LEN);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ReadCommonIMR(W5500_Driver_t * drv, uint8_t * imr) {
+
+	drv->tx[0] = (W5500_COMMON_IMR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_IMR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	if (W5500_Receive(drv, drv->tx, drv->rx, 4) != HAL_OK) {
+		return HAL_ERROR;
+	}
+
+	*imr = drv->rx[3];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ConfigureCommonIMR(W5500_Driver_t * drv, uint8_t imr, bool clear) {
+
+	if (!clear) {
+		uint8_t current_imr;
+		if (W5500_ReadCommonIMR(drv, &current_imr) != HAL_OK) {
+			return HAL_ERROR;
+		}
+		imr = current_imr | imr;
+	}
+
+	drv->tx[0] = (W5500_COMMON_IMR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_IMR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = imr;
+
+	W5500_Transmit(drv, drv->tx, 4);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ReadCommonSocketIMR(W5500_Driver_t * drv, uint8_t * imr) {
+
+
+	drv->tx[0] = (W5500_COMMON_SIMR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_SIMR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	if (W5500_Receive(drv, drv->tx, drv->rx, 4) != HAL_OK) {
+		return HAL_ERROR;
+	}
+
+	*imr = drv->rx[3];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ConfigureCommonSocketIMR(W5500_Driver_t * drv, uint8_t imr, bool clear) {
+	if (!clear) {
+		uint8_t current_imr;
+		if (W5500_ReadCommonSocketIMR(drv, &current_imr) != HAL_OK) {
+			return HAL_ERROR;
+		}
+		imr = current_imr | imr;
+	}
+
+	drv->tx[0] = (W5500_COMMON_SIMR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_SIMR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = imr;
+
+	W5500_Transmit(drv, drv->tx, 4);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ReadCommonSocketIR(W5500_Driver_t * drv, uint8_t * ir) {
+
+	drv->tx[0] = (W5500_COMMON_SIR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_SIR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	if (W5500_Receive(drv, drv->tx, drv->rx, 4) != HAL_OK) {
+		return HAL_ERROR;
+	}
+
+	*ir = drv->rx[3];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ReadSocketIR(W5500_Driver_t * drv, uint8_t socket, uint8_t * ir) {
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_IR | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	if (W5500_Receive(drv, drv->tx, drv->rx, 4) != HAL_OK) {
+		return HAL_ERROR;
+	}
+
+	*ir = drv->rx[3];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ClearSocketIR(W5500_Driver_t * drv, uint8_t socket, uint8_t * ir) {
+
+	if (ir == NULL) {
+		*ir = 0xFF;
+	}
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_IR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = *ir;
+
+	W5500_Transmit(drv, drv->tx, 4);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ReadUnreachIPPort(W5500_Driver_t * drv, uint8_t * ip, uint8_t * port) {
+
+	drv->tx[0] = (W5500_COMMON_UIPR >> 8) & 0xFF;
+	drv->tx[1] = W5500_COMMON_UIPR & 0xFF;
+	drv->tx[2] = W5500_BSB_COMMON | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	if (W5500_Receive(drv, drv->tx, drv->rx, 3 + W5500_COMMON_UIPR_LEN + W5500_COMMON_UPORTR_LEN) != HAL_OK) {
+		return HAL_ERROR;
+	}
+	memcpy(ip, &drv->rx[3], W5500_COMMON_UIPR_LEN);
+	memcpy(port, &drv->rx[3 + W5500_COMMON_UIPR_LEN], W5500_COMMON_UPORTR_LEN);
+
+	return HAL_OK;
+}
+
+
+uint8_t W5500_OpenSocket(W5500_Driver_t * drv, uint8_t protocol, uint16_t port, int8_t priority) {
+
+	uint8_t socket = 0xFF;
+
+	if (protocol == W5500_Sn_MR_MACRAW) {
+		if (drv->used_sockets & (1 << 0)) {
+			return 0xFF; // MACRAW socket already in use
+		}
+		socket = 0;
+	} else {
+		for (int8_t i = W5500_MAX_SOCKETS-1; i >= 0 ; i--) {
+			if ((drv->used_sockets & (1 << i)) == 0) {
+				socket = i;
+				break;
+			}
+		}
+	}
+
+	if (socket == 0xFF) return 0xFF;
+
+	drv->sockets[socket].id = socket;
+
+	drv->used_sockets |= (1 << socket);
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_MR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = protocol;
+
+	drv->sockets[socket].type = protocol;
+
+	W5500_Transmit(drv, drv->tx, 4);
+
+	drv->sockets[socket].source_port[0] = port >> 8;
+	drv->sockets[socket].source_port[1] = port & 0xFF;
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_PORT | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = drv->sockets[socket].source_port[0];
+	drv->tx[4] = drv->sockets[socket].source_port[1];
+
+	W5500_Transmit(drv, drv->tx, 5);
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_CR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = W5500_Sn_CR_OPEN;
+
+	W5500_Transmit(drv, drv->tx, 4);
+
+	drv->hw_sockets[socket].id = socket;
+	drv->hw_sockets[socket].tx_buf_size = 2048;
+	drv->hw_sockets[socket].tx_mask = drv->hw_sockets[socket].tx_buf_size - 1;
+	drv->hw_sockets[socket].rx_buf_size = 2048;
+	drv->hw_sockets[socket].rx_mask = drv->hw_sockets[socket].rx_buf_size - 1;
+
+	return socket;
+}
+
+HAL_StatusTypeDef W5500_CloseSocket(W5500_Driver_t * drv, uint8_t socket) {
+
+	if (!(drv->used_sockets & (1 << socket))) {
+		return HAL_ERROR; // Socket not in use
+	}
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_CR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = W5500_Sn_CR_CLOSE;
+
+	HAL_StatusTypeDef ret = W5500_Transmit(drv, drv->tx, 4);
+
+	drv->used_sockets &= ~(1 << socket);
+
+	return ret;
+}
+
+HAL_StatusTypeDef W5500_SetSocketDestIP(W5500_Driver_t * drv, uint8_t socket, uint8_t * ip) {
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_DIPR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	memcpy(&drv->tx[3], ip, 4);
+	memcpy(&drv->sockets[socket].remote_ip, ip, 4);
+
+	W5500_Transmit(drv, drv->tx, 7);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_SetSocketDestPort(W5500_Driver_t * drv, uint8_t socket, uint16_t port) {
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_DPORT | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = (port >> 8) & 0xFF;
+	drv->tx[4] = port & 0xFF;
+
+	W5500_Transmit(drv, drv->tx, 5);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_SetSocketDestMAC(W5500_Driver_t * drv, uint8_t socket, uint8_t * mac) {
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_DHAR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	memcpy(&drv->tx[3], mac, 6);
+
+	W5500_Transmit(drv, drv->tx, 9);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_WriteSnCR(W5500_Driver_t * drv, uint8_t socket, uint8_t command) {
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_CR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = command;
+
+	W5500_Transmit(drv, drv->tx, 4);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ReadSnTXWR(W5500_Driver_t * drv, uint8_t socket, uint16_t * tx_ptr) {
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_TX_WR | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	W5500_Receive(drv, drv->tx, drv->rx, 3 + W5500_Sn_TX_WR_LEN);
+	*tx_ptr = (drv->rx[3] << 8) | drv->rx[4];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_WriteSnTXWR(W5500_Driver_t * drv, uint8_t socket, uint16_t tx_ptr) {
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_TX_WR | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = (tx_ptr >> 8) & 0xFF;
+	drv->tx[4] = tx_ptr & 0xFF;
+
+	W5500_Transmit(drv, drv->tx, 5);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ReadSnTXRD(W5500_Driver_t * drv, uint8_t socket, uint16_t * tx_rd_ptr) {
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_TX_RD | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	W5500_Receive(drv, drv->tx, drv->rx, 3 + W5500_Sn_TX_RD_LEN);
+
+	*tx_rd_ptr = (drv->rx[3] << 8) | drv->rx[4];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_WriteSnRXRD(W5500_Driver_t * drv, uint8_t socket, uint16_t rx_rd_ptr) {
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_RX_RD | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+	drv->tx[3] = (rx_rd_ptr >> 8) & 0xFF;
+	drv->tx[4] = rx_rd_ptr & 0xFF;
+
+	W5500_Transmit(drv, drv->tx, 5);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ReadSnRXRSR(W5500_Driver_t * drv, uint8_t socket, uint16_t * rx_size) {
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_RX_RSR | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	W5500_Receive(drv, drv->tx, drv->rx, 3 + W5500_Sn_RX_RSR_LEN);
+
+	*rx_size = (drv->rx[3] << 8) | drv->rx[4];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ReadSnRXWR(W5500_Driver_t * drv, uint8_t socket, uint16_t * rx_ptr) {
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_RX_WR | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	W5500_Receive(drv, drv->tx, drv->rx, 3 + W5500_Sn_RX_WR_LEN);
+	*rx_ptr = (drv->rx[3] << 8) | drv->rx[4];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_ReadSnRXRD(W5500_Driver_t * drv, uint8_t socket, uint16_t * rx_rd_ptr) {
+
+	drv->tx[0] = (W5500_BSB_SOCKET_REG(socket) >> 8) & 0xFF;
+	drv->tx[1] = W5500_BSB_SOCKET_REG(socket) & 0xFF;
+	drv->tx[2] = W5500_Sn_RX_RD | W5500_RWB_READ | W5500_OPCODE_VDM;
+
+	W5500_Receive(drv, drv->tx, drv->rx, 3 + W5500_Sn_RX_RD_LEN);
+
+	*rx_rd_ptr = (drv->rx[3] << 8) | drv->rx[4];
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_SocketSend(
+	W5500_Driver_t *drv,
+	uint8_t socket,
+	uint8_t *data,
+	uint16_t size
+) {
+	uint16_t tx_wr;
+	uint16_t offset;
+
+	// Read TX Write Pointer
+	W5500_ReadSnTXWR(drv, socket, &tx_wr);
+
+	// Calculate offset address
+	offset = tx_wr & drv->hw_sockets[socket].tx_mask;
+
+	drv->tx[0] = (offset >> 8) & 0xFF;
+	drv->tx[1] = offset & 0xFF;
+	drv->tx[2] = W5500_BSB_SOCKET_TX(socket) | W5500_RWB_WRITE | W5500_OPCODE_VDM;
+
+	memcpy(&drv->tx[3], data, size);
+
+	W5500_Transmit(drv, drv->tx, 3 + size);
+
+	// Update TX Write Pointer
+	tx_wr += size;
+	W5500_WriteSnTXWR(drv, socket, tx_wr);
+
+	W5500_WriteSnCR(drv, socket, W5500_Sn_CR_SEND);
+
+	return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_SocketRecv(
+    W5500_Driver_t *drv,
+    uint8_t socket,
+    uint8_t *out,
+    uint16_t max_len,
+    uint16_t *out_len
+) {
+    uint16_t rx_size;
+    uint16_t rx_rd;
+    uint16_t offset;
+
+    W5500_ReadSnRXRSR(drv, socket, &rx_size);
+
+    if (rx_size == 0) {
+        *out_len = 0;
+        return HAL_OK;
+    }
+
+    if (rx_size > max_len)
+        rx_size = max_len;
+
+    W5500_ReadSnRXRD(drv, socket, &rx_rd);
+
+    offset = rx_rd & drv->hw_sockets[socket].rx_mask;
+
+    drv->tx[0] = (offset >> 8) & 0xFF;
+    drv->tx[1] = offset & 0xFF;
+    drv->tx[2] = W5500_BSB_SOCKET_RX(socket) |
+                 W5500_RWB_READ |
+                 W5500_OPCODE_VDM;
+
+    W5500_Receive(drv, drv->tx, drv->rx, 3 + rx_size);
+
+    memcpy(out, &drv->rx[3], rx_size);
+
+    rx_rd += rx_size;
+    W5500_WriteSnRXRD(drv, socket, rx_rd);
+
+    W5500_WriteSnCR(drv, socket, W5500_Sn_CR_RECV);
+
+    *out_len = rx_size;
+    return HAL_OK;
+}
+
+HAL_StatusTypeDef W5500_DHCPDiscovery(W5500_Driver_t * drv){
+	if (drv->IP[0] != 0 || drv->IP[1] != 0 || drv->IP[2] != 0 || drv->IP[3] != 0) {
+		W5500_SetIP(w5500);
+	}
+	if (drv->GATEWAY[0] != 0 || drv->GATEWAY[1] != 0 || drv->GATEWAY[2] != 0 || drv->GATEWAY[3] != 0) {
+		W5500_SetGATEWAY(w5500);
+	}
+	if (drv->SUBNET[0] != 0 || drv->SUBNET[1] != 0 || drv->SUBNET[2] != 0 || drv->SUBNET[3] != 0) {
+		W5500_SetSUBNET(w5500);
+	}
+
+	uint8_t socket = W5500_OpenSocket(drv, W5500_Sn_MR_UDP, DHCP_CLIENT_PORT);
+	W5500_SetSocketDestPort(drv, socket, DHCP_SERVER_PORT);
+	uint8_t dest_ip[4] = {255, 255, 255, 255};
+	W5500_SetSocketDestIP(drv, socket, dest_ip);
+	uint8_t dest_mac[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+	W5500_SetSocketDestMAC(drv, socket, dest_mac);
+	drv->dhcp_xid = HAL_GetTick();
+	memset(&drv->tx[3], 0, 1024 - 3); // Clear TX buffer
+	uint16_t dhcp_len = build_dhcp_discover(&drv->tx[3], drv->MAC, drv->dhcp_xid);
+	W5500_SocketSend(drv, socket, &drv->tx[3], dhcp_len);
+
+
+	return HAL_OK;
+}
+
+void socketTask(void *argument) {
+
+	W5500_SocketConfig_t *s_cfg = (W5500_SocketConfig_t *)argument;
+
+	W5500_Driver_t *w5500 = (W5500_Driver_t *)s_cfg->parent;
+
+	uint32_t msg;
+	osStatus_t status;
+
+	for(;;) {
+		status = osMessageQueueGet(s_cfg->socketQueueHandle, &msg, NULL, osWaitForever);
+	}
+}
+
+HAL_StatusTypeDef W5500_InterruptHandler(W5500_Driver_t * drv) {
+	osEventFlagsSet(drv->interruptEventHandle, 0x01);
+	return HAL_OK;
+}
+
+void W5500_SocketFSM(W5500_Socket_t *s)
+{
+    SnSR_t hw = w5500_get_sn_sr(s->id);
+
+    switch (s->state) {
+
+    case SOCK_OPENING:
+        if (s->type == SOCK_TCP &&
+            hw == ESTABLISHED) {
+            s->state = SOCK_READY;
+        }
+
+        if (s->type == SOCK_UDP &&
+            hw == UDP) {
+            s->state = SOCK_READY;
+        }
+        break;
+
+    case SOCK_READY:
+        if (w5500_rx_available(s->id)) {
+            s->rx_ready = true;
+        }
+        break;
+
+    case SOCK_CLOSING:
+        if (hw == CLOSED) {
+            s->state = SOCK_UNUSED;
+        }
+        break;
+
+    default:
+        break;
+    }
+}
+
+// Variável para manter o socket do DHCP persistente
+static uint8_t dhcp_socket = 0xFF;
+
+void DHCP_SendDiscover(W5500_Driver_t *drv) {
+    // Abre o socket APENAS se ainda não estiver aberto
+    if (dhcp_socket == 0xFF) {
+        dhcp_socket = W5500_OpenSocket(drv, W5500_Sn_MR_UDP, DHCP_CLIENT_PORT, 0);
+    }
+
+    // Configura destino (Broadcast)
+    uint8_t dest_ip[4] = {255, 255, 255, 255};
+    uint8_t dest_mac[6] = {0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF};
+    W5500_SetSocketDestIP(drv, dhcp_socket, dest_ip);
+    W5500_SetSocketDestPort(drv, dhcp_socket, DHCP_SERVER_PORT);
+    W5500_SetSocketDestMAC(drv, dhcp_socket, dest_mac);
+
+    // Gera XID novo
+    drv->dhcp.xid = HAL_GetTick(); // Usar tick como semente simples
+
+    // Monta e Envia
+    uint16_t len = build_dhcp_discover(&drv->tx[0], drv->MAC, drv->dhcp.xid);
+    W5500_SocketSend(drv, dhcp_socket, &drv->tx[0], len);
+}
+
+void DHCP_SendRequest(W5500_Driver_t *drv) {
+    // Reutiliza o mesmo socket e XID
+    uint16_t len = build_dhcp_request(&drv->tx[0], drv->MAC, drv->dhcp.xid,
+                                      drv->dhcp.offered_ip, drv->dhcp.server_id);
+    W5500_SocketSend(drv, dhcp_socket, &drv->tx[0], len);
+}
+
+// Retorna true se recebeu o pacote esperado
+bool DHCP_CheckResponse(W5500_Driver_t *drv, uint8_t expected_msg_type) {
+    uint16_t len = 0;
+
+    // Verifica se tem dados no socket DHCP
+    W5500_SocketRecv(drv, dhcp_socket, drv->rx, 2048, &len);
+
+    if (len > 0) {
+        uint8_t msg = DHCP_Parse_Response(drv->rx, len, drv->dhcp.xid, &drv->dhcp);
+        if (msg == expected_msg_type) {
+            return true;
+        }
+    }
+    return false;
+}
+
+void DHCP_FSM(W5500_Driver_t *drv) {
+    DHCP_Control_t *dhcp = &drv->dhcp;
+
+    switch (dhcp->state) {
+        case DHCP_IDLE:
+             // Resetar dados
+             dhcp_socket = 0xFF; // Força reabertura correta se necessário
+             dhcp->state = DHCP_SEND_DISCOVER;
+             break;
+
+        case DHCP_SEND_DISCOVER:
+            DHCP_SendDiscover(drv);
+            dhcp->t_start = HAL_GetTick();
+            dhcp->state = DHCP_WAIT_OFFER;
+            break;
+
+        case DHCP_WAIT_OFFER:
+            // Tenta ler OFFER
+            if (DHCP_CheckResponse(drv, DHCP_MSG_OFFER)) {
+                dhcp->state = DHCP_SEND_REQUEST;
+            }
+            // Timeout de 2 segundos
+            else if (HAL_GetTick() - dhcp->t_start > 2000) {
+                dhcp->state = DHCP_SEND_DISCOVER; // Tenta de novo
+            }
+            break;
+
+        case DHCP_SEND_REQUEST:
+            DHCP_SendRequest(drv);
+            dhcp->t_start = HAL_GetTick();
+            dhcp->state = DHCP_WAIT_ACK;
+            break;
+
+        case DHCP_WAIT_ACK:
+            // Tenta ler ACK
+            if (DHCP_CheckResponse(drv, DHCP_MSG_ACK)) {
+                // SUCESSO! Configura o W5500 com o novo IP
+                memcpy(drv->IP, &dhcp->offered_ip, 4);
+                W5500_SetIP(drv);
+                // Nota: Deveria setar Gateway e Subnet aqui também,
+                // mas precisa extrair eles no Parse_Response primeiro.
+
+                W5500_CloseSocket(drv, dhcp_socket); // Fecha socket DHCP
+                dhcp->state = DHCP_BOUND;
+            }
+            else if (HAL_GetTick() - dhcp->t_start > 2000) {
+                dhcp->state = DHCP_SEND_DISCOVER; // Voltar ao início se falhar
+            }
+            break;
+
+        case DHCP_BOUND:
+            // Rede OK. Pode verificar Lease Time aqui futuramente.
+            break;
+    }
+}
+
+void DHCP_FSM(W5500_Driver_t *drv) {
+    DHCP_Control_t *dhcp = &drv->dhcp;
+
+    switch (dhcp->state) {
+
+    case DHCP_IDLE:
+        dhcp->xid = HAL_GetTick();
+        dhcp->state = DHCP_SEND_DISCOVER;
+        break;
+
+    case DHCP_SEND_DISCOVER:
+        DHCP_SendDiscover(drv);
+        dhcp->t_start = HAL_GetTick();
+        dhcp->state = DHCP_WAIT_OFFER;
+        break;
+
+    case DHCP_WAIT_OFFER:
+        if (DHCP_ReceiveOffer(drv)) {
+            dhcp->state = DHCP_SEND_REQUEST;
+        } else if (HAL_GetTick() - dhcp->t_start > 3000) {
+            dhcp->state = DHCP_SEND_DISCOVER;
+        }
+        break;
+
+    case DHCP_SEND_REQUEST:
+        DHCP_SendRequest(drv);
+        dhcp->t_start = HAL_GetTick();
+        dhcp->state = DHCP_WAIT_ACK;
+        break;
+
+    case DHCP_WAIT_ACK:
+        if (DHCP_ReceiveAck(drv)) {
+            DHCP_ApplyConfig(drv);
+            dhcp->state = DHCP_BOUND;
+        }
+        break;
+
+    case DHCP_BOUND:
+        // Rede operacional
+        break;
+
+    default:
+        dhcp->state = DHCP_ERROR;
+        break;
+    }
+}
+
+
+void w5500_NetworkManagerTask(void *argument) {
+	void W5500_NetTask(void *arg) {
+	    W5500_Driver_t *drv = arg;
+
+	    for (;;) {
+	        uint32_t flags = osEventFlagsWait(
+	            drv->EventHandle,
+	            EVT_W5500_IRQ | EVT_NET_TICK | EVT_APP_REQUEST,
+	            osFlagsWaitAny,
+	            100
+	        );
+
+	        if (flags & EVT_NET_TICK) {
+	            DHCP_FSM(drv);
+	        }
+
+	        if (flags & EVT_W5500_IRQ) {
+	            W5500_HandleIRQ(drv);
+	        }
+
+	        if (flags & EVT_APP_REQUEST) {
+	            Net_HandleAppRequests(drv);
+	        }
+	    }
+	}
+
+
+HAL_StatusTypeDef W5500_Init(W5500_Driver_t * drv) {
+	const osSemaphoreAttr_t bufferBinarySem_attributes = {
+	  .name = "buffBinarySem",
+	  .cb_mem = drv->bufferSemControlBlock,
+	  .cb_size = sizeof(drv->bufferSemControlBlock),
+	};
+	drv->bufferSemaphore = osSemaphoreNew(1, 1, &bufferBinarySem_attributes);
+	W5500_Reset(w5500);
+	W5500_ReadVERSIONR(w5500);
+	W5500_GenerateMAC(w5500);
+	W5500_SetMAC(w5500);
+	W5500_ReadMAC(w5500);
+	W5500_SetIP(w5500);
+	W5500_SetGATEWAY(w5500);
+	W5500_SetSUBNET(w5500);
+	W5500_PHYReset(w5500);
+
+	const osEventFlagsAttr_t interruptEvent_attributes = {
+	  .name = "w5500Event",
+	  .cb_mem = drv->interruptEventControlBlock,
+	  .cb_size = sizeof(drv->interruptEventControlBlock),
+	};
+	drv->interruptEventHandle = osEventFlagsNew(&interruptEvent_attributes);
+
+	return HAL_OK;
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><user username="LuccasMarchetti">
+    <conversations>
+        <conversation conversationId="23b322f6-e431-4f2c-8537-e49115584473" creationDate="2026-01-11T14:37:45.427773900Z" lastMessageDate="2026-01-11T14:39:21.205010600Z" title="11:37:19 **** Incremental Build of configuration D..."/>
+        <conversation conversationId="f0f8f5e1-0c7f-4243-8ea7-d27f3cee4555" creationDate="2026-02-17T22:24:33.921423900Z" lastMessageDate="2026-02-18T13:08:08.648757600Z" title="Debugging SPI Semaphore Issues in FreeRTOS"/>
+        <conversation conversationId="5060669e-fcc0-44a8-8d83-7c7a0daaa92c" creationDate="2026-02-21T22:00:43.552890Z" lastMessageDate="2026-02-22T19:02:13.519586900Z" title="Resolving Circular Includes in C Headers"/>
+    </conversations>
+</user>

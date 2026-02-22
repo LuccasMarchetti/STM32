@@ -1,0 +1,17 @@
+../Core/Src/bmp280.c:5:19:BMP280_ReleaseSemaphore	1
+../Core/Src/bmp280.c:10:19:BMP280_Transmit	1
+../Core/Src/bmp280.c:21:19:BMP280_Receive	1
+../Core/Src/bmp280.c:32:19:BMP280_MemRead	1
+../Core/Src/bmp280.c:43:19:BMP280_MemWrite	1
+../Core/Src/bmp280.c:54:19:BMP280_Setup	3
+../Core/Src/bmp280.c:63:19:BMP280_Reset	1
+../Core/Src/bmp280.c:70:19:BMP280_ReadID	1
+../Core/Src/bmp280.c:79:19:BMP280_ReadCalibration	3
+../Core/Src/bmp280.c:99:19:BMP280_Configure	1
+../Core/Src/bmp280.c:124:19:BMP280_Init	4
+../Core/Src/bmp280.c:140:19:BMP280_ReadTemperature	1
+../Core/Src/bmp280.c:149:19:BMP280_ReadPressure	1
+../Core/Src/bmp280.c:157:19:BMP280_ReadAll	1
+../Core/Src/bmp280.c:167:19:BMP280_CompensateTemperature	1
+../Core/Src/bmp280.c:178:19:BMP280_CompensatePressure	2
+../Core/Src/bmp280.c:202:19:BMP280_ReadData	1

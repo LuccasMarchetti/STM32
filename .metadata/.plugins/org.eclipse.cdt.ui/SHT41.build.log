@@ -1,0 +1,10 @@
+13:35:20 **** Build of configuration Debug for project SHT41 ****
+make -j8 all 
+arm-none-eabi-size  SHT41.elf 
+   text	   data	    bss	    dec	    hex	filename
+  34320	     96	   8904	  43320	   a938	SHT41.elf
+Finished building: default.size.stdout
+ 
+
+13:35:21 Build Finished. 0 errors, 0 warnings. (took 864ms)
+

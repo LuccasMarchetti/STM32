@@ -1,0 +1,13 @@
+/*
+ * ethernet_ntp.h
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: Luccas
+ */
+
+#ifndef ETHERNET_NTP_H_
+#define ETHERNET_NTP_H_
+
+
+
+#endif /* ETHERNET_NTP_H_ */

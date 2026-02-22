@@ -1,0 +1,164 @@
+/*
+ * ethernet_ntp.c
+ *
+ *  Created on: Feb 21, 2026
+ *      Author: Luccas
+ */
+
+#include "ethernet_ntp.h"
+#include "w5500.h"
+#include <string.h>
+#include <stdint.h>
+#include <stdbool.h>
+#include <time.h>
+#include <stdio.h>
+
+void build_ntp_request(uint8_t *buffer) {
+    // Zera os 48 bytes
+    memset(buffer, 0, 48);
+
+    // Configura o primeiro byte (LI=0, VN=3, Mode=3)
+    buffer[0] = 0x1B;
+}
+
+// Retorna o Unix Timestamp (segundos desde 1970)
+uint32_t parse_ntp_response(uint8_t *buffer, uint16_t len) {
+    if (len < 48) {
+        return 0; // Pacote inválido
+    }
+
+    // Extrai os 4 bytes do tempo (A partir do índice 40)
+    // O NTP usa Big-Endian, então precisamos deslocar os bytes corretamente
+    uint32_t seconds_since_1900 = (buffer[40] << 24) |
+                                  (buffer[41] << 16) |
+                                  (buffer[42] << 8)  |
+                                   buffer[43];
+
+    // Converte de "Tempo NTP (1900)" para "Tempo Unix (1970)"
+    // 2.208.988.800 é a quantidade de segundos entre 1900 e 1970
+    uint32_t unix_timestamp = seconds_since_1900 - 2208988800U;
+
+    return unix_timestamp;
+}
+
+// Vamos reaproveitar a função que converte "pool.ntp.org"
+// para "\x04pool\x03ntp\x03org\x00"
+uint8_t* format_dns_name(uint8_t *buffer, const char *domain) {
+    char temp_domain[64];
+    strcpy(temp_domain, domain);
+
+    char *token = strtok(temp_domain, ".");
+    while (token != NULL) {
+        uint8_t len = strlen(token);
+        *buffer++ = len;
+        memcpy(buffer, token, len);
+        buffer += len;
+        token = strtok(NULL, ".");
+    }
+    *buffer++ = 0x00; // Terminador Nulo (Root)
+    return buffer;
+}
+
+void NTP_FSM(W5500_Driver_t *drv) {
+    NTP_Control_t *ntp = &drv->ntp;
+
+    switch (ntp->state) {
+        case NTP_IDLE:
+            break;
+
+        case NTP_SEND_REQUEST:
+            if (ntp->socket == 0xFF) {
+                // Abre socket UDP na porta 12300 (qualquer uma livre)
+                ntp->socket = W5500_OpenSocket(drv, W5500_Sn_MR_UDP, 12300);
+            }
+
+            // Monta o pacote de 48 bytes e envia para o IP do servidor
+            NTP_SendRequest(drv);
+
+            ntp->t_start = HAL_GetTick();
+            ntp->state = NTP_WAIT_RESPONSE;
+            break;
+
+        case NTP_WAIT_RESPONSE:
+            if ((HAL_GetTick() - ntp->t_start) >= NTP_TIMEOUT_MS) {
+                ntp->retries++;
+                if (ntp->retries >= NTP_MAX_RETRIES) {
+                    ntp->state = NTP_ERROR;
+                    W5500_CloseSocket(drv, ntp->socket);
+                    ntp->socket = 0xFF;
+                } else {
+                    ntp->state = NTP_SEND_REQUEST;
+                }
+            }
+            break;
+
+        case NTP_DONE:
+            // IP e hora obtidos!
+            break;
+
+        case NTP_ERROR:
+            break;
+    }
+}
+
+void NTP_SendRequest(W5500_Driver_t *drv) {
+    NTP_Control_t *ntp = &drv->ntp;
+
+    // Buffer local para o pacote de 48 bytes
+    uint8_t ntp_msg[48];
+
+    // 1. Zera todos os bytes
+    memset(ntp_msg, 0, sizeof(ntp_msg));
+
+    // 2. Configura o Magic Byte (LI = 0, Version = 3, Mode = 3)
+    ntp_msg[0] = 0x1B;
+
+    // 3. Envia o pacote UDP para o IP do servidor na porta 123
+    // Assumindo que você tenha uma função de envio UDP (SendTo) no seu driver:
+    W5500_SetSocketDestIP(drv, ntp->socket, ntp->server_ip);
+    W5500_SetSocketDestPort(drv, ntp->socket, 123);
+    W5500_SocketSend(drv, ntp->socket, ntp_msg, 48);
+
+    // (Opcional) Print de debug para você acompanhar no terminal:
+    // printf("Enviando requisicao NTP para %d.%d.%d.%d:123\n",
+    //        ntp->server_ip[0], ntp->server_ip[1], ntp->server_ip[2], ntp->server_ip[3]);
+}
+
+void NTP_HandleRx(W5500_Driver_t *drv, uint8_t *buf, uint16_t len) {
+    NTP_Control_t *ntp = &drv->ntp;
+
+    // Extrai o timestamp (aquela função que já desenhamos)
+    uint32_t unix_time = parse_ntp_response(buf, len);
+    parse_unix_to_local_time(unix_time, -3, &ntp->current_time); // Exemplo: GMT-3 para Brasil
+    if (unix_time > 0) {
+        // 1. Encerra o NTP
+        ntp->current_unix_time = unix_time;
+        ntp->state = NTP_DONE;
+        W5500_CloseSocket(drv, ntp->socket);
+        ntp->socket = 0xFF;
+
+        // 2. REDE 100% PRONTA!
+        drv->net_state = SYS_NET_READY;
+
+        // Dispara uma flag pro resto do STM32 saber que a internet tá full!
+        // osEventFlagsSet(drv->EventHandle, EVT_APP_READY);
+    }
+}
+
+void parse_unix_to_local_time(uint32_t unix_timestamp, int8_t fuso_horario, RTC_Time_t * tempo_local) {
+    // 1. Aplica o fuso horário (1 hora = 3600 segundos)
+    // Exemplo: Para o Brasil (GMT-3), fuso_horario = -3
+    int32_t tempo_ajustado = unix_timestamp + (fuso_horario * 3600);
+
+    // 2. Usa a estrutura interna do C para converter os segundos
+    time_t raw_time = (time_t)tempo_ajustado;
+    struct tm *ptm = gmtime(&raw_time); // gmtime pega o tempo bruto sem o SO interferir
+
+    // 3. Preenche a sua estrutura (O 'tm' do C tem umas peculiaridades históricas)
+    tempo_local->ano = ptm->tm_year + 1900; // Anos desde 1900
+    tempo_local->mes = ptm->tm_mon + 1;     // Meses vão de 0 a 11
+    tempo_local->dia = ptm->tm_mday;
+    tempo_local->hora = ptm->tm_hour;
+    tempo_local->minuto = ptm->tm_min;
+    tempo_local->segundo = ptm->tm_sec;
+}

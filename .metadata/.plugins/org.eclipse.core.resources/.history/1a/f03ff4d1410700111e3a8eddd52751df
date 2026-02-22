@@ -1,0 +1,224 @@
+#include  "ethernet_dhcp.h"
+
+uint16_t build_dhcp_discover(uint8_t * buffer, uint8_t *mac_addr, uint32_t xid) {
+
+    dhcp_packet_t *pkt = (dhcp_packet_t *)buffer;
+
+    // ==========================================
+    // Fixed Header
+    // ==========================================
+
+    pkt->op    = DHCP_OP_REQUEST;      // 1 = Boot Request (Client -> Server)
+    pkt->htype = DHCP_HTYPE_ETHERNET;  // 1 = Ethernet
+    pkt->hlen  = DHCP_HLEN_ETHERNET;   // 6 = MAC Length
+    pkt->hops  = 0;                    // Always 0 for client
+
+    // Transaction ID
+    pkt->xid   = htonl(xid);
+
+    pkt->secs  = 0;
+
+    pkt->flags = htons(DHCP_FLAG_BROADCAST);
+
+    pkt->ciaddr = 0;
+    pkt->yiaddr = 0;
+    pkt->siaddr = 0;
+    pkt->giaddr = 0;
+
+    memcpy(pkt->chaddr, mac_addr, 6);
+
+    pkt->magic_cookie = htonl(DHCP_MAGIC_COOKIE);
+
+    // ==========================================
+    // Option Fields
+    // ==========================================
+
+    uint8_t *opt_ptr = pkt->options;
+
+    // --- Option 53: Message Type = DISCOVER ---
+    *opt_ptr++ = DHCP_OPT_MSG_TYPE;    // Code 53
+    *opt_ptr++ = 1;                    // Length 1 byte
+    *opt_ptr++ = DHCP_MSG_DISCOVER;    // Value 1 (Discover)
+
+    // --- Option 55: Parameter Request List ---
+    // Mask, Gateway, DNS and Domain Name
+    *opt_ptr++ = DHCP_OPT_PARAM_LIST;  // Code 55
+    *opt_ptr++ = 4;                    // Length 4 bytes
+    *opt_ptr++ = DHCP_OPT_SUBNET_MASK;
+    *opt_ptr++ = DHCP_OPT_ROUTER;
+    *opt_ptr++ = DHCP_OPT_DNS_SERVER;
+    *opt_ptr++ = DHCP_OPT_DOMAIN_NAME;
+
+    // --- Option 61: Client Identifier --
+    *opt_ptr++ = DHCP_OPT_CLIENT_ID;
+    *opt_ptr++ = 7;                    // Length (1 byte type + 6 bytes MAC)
+    *opt_ptr++ = DHCP_HTYPE_ETHERNET;  // Type 1
+    memcpy(opt_ptr, mac_addr, 6);
+    opt_ptr += 6;
+
+    // --- Option 255: END ---
+    *opt_ptr++ = DHCP_OPT_END;
+
+    return DHCP_FIXED_LEN + (opt_ptr - pkt->options);
+}
+
+uint16_t build_dhcp_request(uint8_t * buffer, uint8_t *mac_addr, uint32_t xid, uint32_t offered_ip, uint32_t server_id) {
+
+    dhcp_packet_t *pkt = (dhcp_packet_t *)buffer;
+
+    // ==========================================
+    // HEADER
+    // ==========================================
+    pkt->op    = DHCP_OP_REQUEST;
+    pkt->htype = DHCP_HTYPE_ETHERNET;
+    pkt->hlen  = DHCP_HLEN_ETHERNET;
+    pkt->hops  = 0;
+
+    // IMPORTANT: use the same XID that you have used in Discover
+    pkt->xid   = htonl(xid);
+
+    pkt->secs  = 0;
+
+    // Broadcast flag (0x8000)
+    pkt->flags = htons(DHCP_FLAG_BROADCAST);
+
+    pkt->ciaddr = 0;
+    pkt->yiaddr = 0;
+    pkt->siaddr = 0;
+    pkt->giaddr = 0;
+
+    memcpy(pkt->chaddr, mac_addr, 6);
+
+    // Magic Cookie
+    pkt->magic_cookie = htonl(DHCP_MAGIC_COOKIE);
+
+    // ==========================================
+    // Options
+    // ==========================================
+    uint8_t *opt = pkt->options;
+
+    // 1. Option 53: Message Type = REQUEST (3)
+    *opt++ = DHCP_OPT_MSG_TYPE;
+    *opt++ = 1;
+    *opt++ = DHCP_MSG_REQUEST;
+
+    // 2. Option 50: Requested IP Address
+    *opt++ = DHCP_OPT_REQUESTED_IP;
+    *opt++ = 4;
+    memcpy(opt, &offered_ip, 4);
+    opt += 4;
+
+    // 3. Option 54: Server Identifier (O IP do Servidor que te respondeu)
+    *opt++ = DHCP_OPT_SERVER_ID;
+    *opt++ = 4;
+    memcpy(opt, &server_id, 4);
+    opt += 4;
+
+    // 4. Option 12: Hostname
+    char hostname[] = "W5500-Device";
+    *opt++ = DHCP_OPT_HOST_NAME;
+    *opt++ = strlen(hostname);
+    memcpy(opt, hostname, strlen(hostname));
+    opt += strlen(hostname);
+
+    // 5. Option 55: Parameter Request List
+    *opt++ = DHCP_OPT_PARAM_LIST;
+    *opt++ = 3;
+    *opt++ = DHCP_OPT_SUBNET_MASK;
+    *opt++ = DHCP_OPT_ROUTER;
+    *opt++ = DHCP_OPT_DNS_SERVER;
+
+    // 6. Option 255: End
+    *opt++ = DHCP_OPT_END;
+
+    return DHCP_FIXED_LEN + (opt - pkt->options);
+}
+
+// Retorna o Tipo da Mensagem (DHCP_MSG_OFFER, DHCP_MSG_ACK, etc) ou 0 se erro
+uint8_t DHCP_Parse_Response(uint8_t *buffer, uint16_t len, uint32_t expected_xid, DHCP_Control_t *dhcp_ctrl) {
+    dhcp_packet_t *pkt = (dhcp_packet_t *)buffer;
+
+    // 1. Validações Básicas
+    if (len < DHCP_FIXED_LEN) return 0; // Pacote muito pequeno
+    if (pkt->op != DHCP_OP_REPLY) return 0; // Não é resposta
+    if (ntohl(pkt->xid) != expected_xid) return 0; // Não é para nós (XID errado)
+    if (ntohl(pkt->magic_cookie) != DHCP_MAGIC_COOKIE) return 0; // Cookie inválido
+
+    // 2. Iterar pelas Opções
+    uint8_t *opt_ptr = (uint8_t *)pkt->options;
+    uint8_t *end_ptr = buffer + len;
+    uint8_t msg_type = 0;
+
+    while (opt_ptr < end_ptr) {
+        uint8_t code = *opt_ptr++;
+        if (code == DHCP_OPT_END) break;
+        if (code == DHCP_OPT_PAD) continue;
+
+        uint8_t opt_len = *opt_ptr++;
+
+        // Proteção contra buffer overflow na leitura
+        if (opt_ptr + opt_len > end_ptr) break;
+
+        switch (code) {
+            case DHCP_OPT_MSG_TYPE:
+                if (opt_len == 1) msg_type = *opt_ptr;
+                break;
+
+            case DHCP_OPT_SERVER_ID:
+                if (opt_len == 4) memcpy(&dhcp_ctrl->server_id, opt_ptr, 4);
+                break;
+
+            case DHCP_OPT_LEASE_TIME:
+                if (opt_len == 4) {
+                    uint32_t val;
+                    memcpy(&val, opt_ptr, 4);
+                    dhcp_ctrl->lease_time = ntohl(val);
+                }
+                break;
+        }
+
+        opt_ptr += opt_len; // Avança para a próxima opção
+    }
+
+    // Se a mensagem for válida, salvamos o IP ofertado (yiaddr)
+    if (msg_type > 0) {
+        dhcp_ctrl->offered_ip = ntohl(pkt->yiaddr); // Já está em Network Byte Order
+    }
+
+    return msg_type;
+}
+
+bool dhcp_timeout(DHCP_Control_t *dhcp, uint32_t timeout_ms) {
+	return (HAL_GetTick() - dhcp->t_start) > timeout_ms;
+}
+
+static uint8_t* dhcp_find_option(dhcp_packet_t *pkt, uint8_t opt, uint8_t *len)
+{
+    uint8_t *p = pkt->options;
+
+    // magic cookie
+    if (p[0] != 99 || p[1] != 130 || p[2] != 83 || p[3] != 99)
+        return NULL;
+
+    p += 4;
+
+    while (*p != DHCP_OPT_END) {
+        if (*p == DHCP_OPT_PAD) {
+            p++;
+            continue;
+        }
+
+        uint8_t type = *p++;
+        uint8_t l    = *p++;
+
+        if (type == opt) {
+            if (len) *len = l;
+            return p;
+        }
+
+        p += l;
+    }
+
+    return NULL;
+}
+

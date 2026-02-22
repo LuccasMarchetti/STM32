@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;W5500/Core/Inc/ethernet.h&apos; to &apos;ethernet_dhcp.h&apos;" description="Rename resource &apos;ethernet.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/ethernet.h" name="ethernet_dhcp.h" stamp="1768955537753" updateReferences="true"/>
+</session>
