@@ -62,9 +62,37 @@ uint8_t* format_dns_name(uint8_t *buffer, const char *domain) {
 void NTP_FSM(W5500_Driver_t *drv) {
     NTP_Control_t *ntp = &drv->ntp;
 
+    if (drv->net_state != SYS_NET_READY) return;
+
     switch (ntp->state) {
         case NTP_IDLE:
+        	ntp->state = NTP_REQ_DNS;
             break;
+        case NTP_REQ_DNS:
+			// Tenta pedir pro DNS resolver o nome
+			if (DNS_RequestResolution(drv, "pool.ntp.org")) {
+				ntp->state = NTP_WAIT_DNS;
+			}
+			// Se retornar false (DNS ocupado), ele tenta de novo no próximo tick
+			break;
+
+        case NTP_WAIT_DNS:
+			// Fica perguntando pro serviço DNS se ele já terminou
+        	if (memcmp(ntp->server_ip, (uint8_t[]){0,0,0,0}, 4) != 0) {
+				// Se o IP já foi preenchido, vamos direto para enviar a requisição NTP
+				ntp->state = NTP_SEND_REQUEST;
+				break;
+			}
+			DNS_Result_t res = DNS_CheckResult(drv, ntp->server_ip);
+
+			if (res == DNS_RES_SUCCESS) {
+				// Uhuu! Temos o IP. Vamos mandar o pacote NTP!
+				ntp->state = NTP_SEND_REQUEST;
+			} else if (res == DNS_RES_FAILED) {
+				// DNS falhou. Volta pro IDLE para tentar tudo de novo depois
+				ntp->state = NTP_IDLE;
+			}
+			break;
 
         case NTP_SEND_REQUEST:
             if (ntp->socket == 0xFF) {

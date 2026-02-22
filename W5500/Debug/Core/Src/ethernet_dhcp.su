@@ -9,6 +9,6 @@
 ../Core/Src/ethernet_dhcp.c:236:6:dhcp_T2_expired	32	static
 ../Core/Src/ethernet_dhcp.c:243:6:dhcp_lease_expired	24	static
 ../Core/Src/ethernet_dhcp.c:259:6:DHCP_FSM	48	static
-../Core/Src/ethernet_dhcp.c:379:6:DHCP_HandleRx	56	static
-../Core/Src/ethernet_dhcp.c:405:6:DHCP_SendRequest	48	static
-../Core/Src/ethernet_dhcp.c:421:6:DHCP_SendDiscover	32	static
+../Core/Src/ethernet_dhcp.c:370:6:DHCP_HandleRx	56	static
+../Core/Src/ethernet_dhcp.c:396:6:DHCP_SendRequest	48	static
+../Core/Src/ethernet_dhcp.c:412:6:DHCP_SendDiscover	32	static

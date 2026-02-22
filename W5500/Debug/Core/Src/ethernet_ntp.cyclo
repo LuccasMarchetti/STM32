@@ -1,7 +1,7 @@
 ../Core/Src/ethernet_ntp.c:16:6:build_ntp_request	1
 ../Core/Src/ethernet_ntp.c:25:10:parse_ntp_response	2
 ../Core/Src/ethernet_ntp.c:46:10:format_dns_name	2
-../Core/Src/ethernet_ntp.c:62:6:NTP_FSM	7
-../Core/Src/ethernet_ntp.c:104:6:NTP_SendRequest	1
-../Core/Src/ethernet_ntp.c:127:6:NTP_HandleRx	2
-../Core/Src/ethernet_ntp.c:148:6:parse_unix_to_local_time	1
+../Core/Src/ethernet_ntp.c:62:6:NTP_FSM	15
+../Core/Src/ethernet_ntp.c:132:6:NTP_SendRequest	1
+../Core/Src/ethernet_ntp.c:155:6:NTP_HandleRx	2
+../Core/Src/ethernet_ntp.c:176:6:parse_unix_to_local_time	1

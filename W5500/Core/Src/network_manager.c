@@ -63,15 +63,10 @@ void W5500_NetworkManagerTask(W5500_Driver_t *drv)
         {
             DHCP_FSM(drv);
 
-            // Roda o DNS apenas se a rede estiver pedindo
-			if (drv->net_state == SYS_NET_DNS_RUNNING) {
-				DNS_FSM(drv);
-			}
+			DNS_FSM(drv);
 
-			// Roda o NTP apenas se a rede estiver pedindo
-			if (drv->net_state == SYS_NET_NTP_RUNNING) {
-				NTP_FSM(drv);
-			}
+			NTP_FSM(drv);
+
         }
     }
 }

@@ -30,6 +30,8 @@ typedef struct {
 // --- ESTADOS DO NTP ---
 typedef enum {
     NTP_IDLE = 0,
+	NTP_REQ_DNS,
+	NTP_WAIT_DNS,
     NTP_SEND_REQUEST,
     NTP_WAIT_RESPONSE,
     NTP_DONE,

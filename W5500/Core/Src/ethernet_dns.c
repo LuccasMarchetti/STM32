@@ -37,6 +37,8 @@ uint16_t build_dns_query(uint8_t *buffer, const char *domain) {
 void DNS_FSM(W5500_Driver_t *drv) {
     DNS_Control_t *dns = &drv->dns;
 
+    if (drv->net_state != SYS_NET_READY) return;
+
     switch (dns->state) {
         case DNS_IDLE:
             // Configurações iniciais feitas na transição do DHCP
@@ -172,13 +174,37 @@ void DNS_HandleRx(W5500_Driver_t *drv, uint8_t *buf, uint16_t len) {
         W5500_CloseSocket(drv, dns->socket);
         dns->socket = 0xFF;
 
-        // 2. Prepara e Acorda o NTP!
-        drv->net_state = SYS_NET_NTP_RUNNING;
-
-        // Copia o IP que acabamos de descobrir para a FSM do NTP
-        memcpy(drv->ntp.server_ip, dns->resolved_ip, 4);
-
-        drv->ntp.retries = 0;
-        drv->ntp.state = NTP_SEND_REQUEST;
+        dns->result = DNS_RES_SUCCESS;
+        dns->state = DNS_IDLE;
+    } else {
+		// Se a resposta não for válida, podemos tentar de novo ou marcar como falha
+		dns->retries++;
+		if (dns->retries >= DNS_MAX_RETRIES) {
+			dns->state = DNS_ERROR; // Falhou de vez
+			W5500_CloseSocket(drv, dns->socket);
+			dns->socket = 0xFF;
+			dns->result = DNS_RES_FAILED;
+		} else {
+			dns->state = DNS_SEND_QUERY; // Tenta de novo
+		}
     }
+}
+
+bool DNS_RequestResolution(W5500_Driver_t *drv, const char *domain) {
+    if (drv->dns.state != DNS_IDLE) return false; // DNS ocupado resolvendo outra coisa!
+
+    strcpy(drv->dns.target_domain, domain);
+    drv->dns.result = DNS_RES_PENDING;
+    drv->dns.retries = 0;
+    drv->dns.state = DNS_SEND_QUERY; // Acorda a FSM do DNS!
+    return true;
+}
+
+DNS_Result_t DNS_CheckResult(W5500_Driver_t *drv, uint8_t *ip_out) {
+    if (drv->dns.result == DNS_RES_SUCCESS) {
+        memcpy(ip_out, drv->dns.resolved_ip, 4);
+        drv->dns.result = DNS_RES_IDLE; // Reseta para o próximo poder usar
+        return DNS_RES_SUCCESS;
+    }
+    return drv->dns.result; // Pode retornar PENDING ou FAILED
 }

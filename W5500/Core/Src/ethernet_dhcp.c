@@ -351,17 +351,8 @@ void DHCP_FSM(W5500_Driver_t *drv)
 					// Se o DHCP não forneceu um servidor de DNS, usa um público (Google)
 					memcpy(drv->dns.dns_server, (uint8_t[]){8,8,8,8}, 4); //
 				}
-				if (memcmp(drv->ntp.server_ip, (uint8_t[]){0,0,0,0}, 4) == 0) {
-					drv->net_state = SYS_NET_DNS_RUNNING;
-					drv->dns.retries = 0;
-					strcpy(drv->dns.target_domain, "pool.ntp.org");
-					drv->dns.state = DNS_SEND_QUERY; // Inicia a máquina do DNS
-				} else {
-					// Se o DHCP já forneceu um servidor de NTP, pula direto para ele
-					drv->net_state = SYS_NET_NTP_RUNNING;
-					drv->ntp.retries = 0;
-					drv->ntp.state = NTP_SEND_REQUEST; // Inicia a máquina do NTP
-				}
+
+				drv->net_state = SYS_NET_READY;
 
         	} else if (dhcp_T1_expired(dhcp)) {
         		dhcp->socket = W5500_OpenSocket(drv, W5500_Sn_MR_UDP, DHCP_CLIENT_PORT);

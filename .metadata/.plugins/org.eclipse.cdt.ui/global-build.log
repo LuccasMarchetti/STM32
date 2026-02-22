@@ -1,106 +1,4 @@
-16:16:51 **** Incremental Build of configuration Debug for project W5500 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/ethernet_ntp.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG '-DCMSIS_device_header=<stm32g0xx.h>' -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ethernet_ntp.d" -MT"Core/Src/ethernet_ntp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ethernet_ntp.o"
-arm-none-eabi-gcc -o "W5500.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Luccas\Desktop\STM32\W5500\STM32G0B1CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W5500.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: W5500.elf
- 
-arm-none-eabi-size  W5500.elf 
-arm-none-eabi-objdump -h -S W5500.elf  > "W5500.list"
-   text	   data	    bss	    dec	    hex	filename
-  52460	    108	  30148	  82716	  1431c	W5500.elf
-Finished building: default.size.stdout
- 
-Finished building: W5500.list
- 
-16:16:55 **** Incremental Build of configuration Debug for project W5500 ****
-make -j8 all 
-arm-none-eabi-size  W5500.elf 
-   text	   data	    bss	    dec	    hex	filename
-  52460	    108	  30148	  82716	  1431c	W5500.elf
-Finished building: default.size.stdout
- 
-16:28:53 **** Incremental Build of configuration Debug for project W5500 ****
-make -j8 all 
-arm-none-eabi-gcc "../Middlewares/Third_Party/FreeRTOS/Source/tasks.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG '-DCMSIS_device_header=<stm32g0xx.h>' -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Middlewares/Third_Party/FreeRTOS/Source/tasks.d" -MT"Middlewares/Third_Party/FreeRTOS/Source/tasks.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Middlewares/Third_Party/FreeRTOS/Source/tasks.o"
-arm-none-eabi-gcc "../Core/Src/w5500.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG '-DCMSIS_device_header=<stm32g0xx.h>' -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/w5500.d" -MT"Core/Src/w5500.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/w5500.o"
-arm-none-eabi-gcc -o "W5500.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Luccas\Desktop\STM32\W5500\STM32G0B1CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W5500.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: W5500.elf
- 
-arm-none-eabi-size  W5500.elf 
-arm-none-eabi-objdump -h -S W5500.elf  > "W5500.list"
-   text	   data	    bss	    dec	    hex	filename
-  52492	    108	  30148	  82748	  1433c	W5500.elf
-Finished building: default.size.stdout
- 
-Finished building: W5500.list
- 
-16:31:34 **** Incremental Build of configuration Debug for project W5500 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/ethernet_dns.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG '-DCMSIS_device_header=<stm32g0xx.h>' -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ethernet_dns.d" -MT"Core/Src/ethernet_dns.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ethernet_dns.o"
-../Core/Src/ethernet_dns.c: In function 'build_dns_query':
-../Core/Src/ethernet_dns.c:27:11: warning: implicit declaration of function 'format_dns_name'; did you mean 'format_mdns_name'? [-Wimplicit-function-declaration]
-   27 |     ptr = format_dns_name(ptr, domain);
-      |           ^~~~~~~~~~~~~~~
-      |           format_mdns_name
-../Core/Src/ethernet_dns.c:27:9: warning: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
-   27 |     ptr = format_dns_name(ptr, domain);
-      |         ^
-../Core/Src/ethernet_dns.c: In function 'DNS_FSM':
-../Core/Src/ethernet_dns.c:57:13: warning: implicit declaration of function 'W500W_SetSocketDestPort'; did you mean 'W5500_SetSocketDestPort'? [-Wimplicit-function-declaration]
-   57 |             W500W_SetSocketDestPort(drv, dns->socket, 53);
-      |             ^~~~~~~~~~~~~~~~~~~~~~~
-      |             W5500_SetSocketDestPort
-arm-none-eabi-gcc -o "W5500.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Luccas\Desktop\STM32\W5500\STM32G0B1CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W5500.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-C:/ST/STM32CubeIDE_2.0.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.13.3.rel1.win32_1.0.100.202509120712/tools/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/ethernet_dns.o: in function `DNS_FSM':
-C:/Users/Luccas/Desktop/STM32/W5500/Debug/../Core/Src/ethernet_dns.c:57:(.text.DNS_FSM+0x96): undefined reference to `W500W_SetSocketDestPort'
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:68: W5500.elf] Error 1
-"make -j8 all" terminated with exit code 2. Build might be incomplete.
-16:31:57 **** Incremental Build of configuration Debug for project W5500 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/ethernet_dns.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG '-DCMSIS_device_header=<stm32g0xx.h>' -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ethernet_dns.d" -MT"Core/Src/ethernet_dns.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ethernet_dns.o"
-../Core/Src/ethernet_dns.c: In function 'build_dns_query':
-../Core/Src/ethernet_dns.c:27:11: warning: implicit declaration of function 'format_dns_name'; did you mean 'format_mdns_name'? [-Wimplicit-function-declaration]
-   27 |     ptr = format_dns_name(ptr, domain);
-      |           ^~~~~~~~~~~~~~~
-      |           format_mdns_name
-../Core/Src/ethernet_dns.c:27:9: warning: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
-   27 |     ptr = format_dns_name(ptr, domain);
-      |         ^
-arm-none-eabi-gcc -o "W5500.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Luccas\Desktop\STM32\W5500\STM32G0B1CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W5500.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: W5500.elf
- 
-arm-none-eabi-size  W5500.elf 
-arm-none-eabi-objdump -h -S W5500.elf  > "W5500.list"
-   text	   data	    bss	    dec	    hex	filename
-  52524	    108	  30148	  82780	  1435c	W5500.elf
-Finished building: default.size.stdout
- 
-Finished building: W5500.list
- 
-16:46:16 **** Incremental Build of configuration Debug for project W5500 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/ethernet_dns.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG '-DCMSIS_device_header=<stm32g0xx.h>' -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ethernet_dns.d" -MT"Core/Src/ethernet_dns.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ethernet_dns.o"
-../Core/Src/ethernet_dns.c: In function 'build_dns_query':
-../Core/Src/ethernet_dns.c:27:11: warning: implicit declaration of function 'format_dns_name'; did you mean 'format_mdns_name'? [-Wimplicit-function-declaration]
-   27 |     ptr = format_dns_name(ptr, domain);
-      |           ^~~~~~~~~~~~~~~
-      |           format_mdns_name
-../Core/Src/ethernet_dns.c:27:9: warning: assignment to 'uint8_t *' {aka 'unsigned char *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
-   27 |     ptr = format_dns_name(ptr, domain);
-      |         ^
-arm-none-eabi-gcc -o "W5500.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Luccas\Desktop\STM32\W5500\STM32G0B1CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W5500.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: W5500.elf
- 
-arm-none-eabi-size  W5500.elf 
-arm-none-eabi-objdump -h -S W5500.elf  > "W5500.list"
-   text	   data	    bss	    dec	    hex	filename
-  52524	    108	  30148	  82780	  1435c	W5500.elf
-Finished building: default.size.stdout
- 
-Finished building: W5500.list
- 
-17:34:06 **** Incremental Build of configuration Debug for project W5500 ****
+18:06:23 **** Incremental Build of configuration Debug for project W5500 ****
 make -j8 all 
 arm-none-eabi-gcc "../Core/Src/app_freertos.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG '-DCMSIS_device_header=<stm32g0xx.h>' -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/app_freertos.d" -MT"Core/Src/app_freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/app_freertos.o"
 arm-none-eabi-gcc "../Core/Src/ethernet_dhcp.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG '-DCMSIS_device_header=<stm32g0xx.h>' -DUSE_HAL_DRIVER -DSTM32G0B1xx -c -I../Core/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc -I../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../Drivers/CMSIS/Device/ST/STM32G0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/ethernet_dhcp.d" -MT"Core/Src/ethernet_dhcp.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/ethernet_dhcp.o"
@@ -118,15 +16,15 @@ arm-none-eabi-gcc "../Core/Src/w5500.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEB
    27 |     ptr = format_dns_name(ptr, domain);
       |         ^
 ../Core/Src/ethernet_ntp.c: In function 'NTP_HandleRx':
-../Core/Src/ethernet_ntp.c:132:5: warning: implicit declaration of function 'parse_unix_to_local_time' [-Wimplicit-function-declaration]
-  132 |     parse_unix_to_local_time(unix_time, -3, &ntp->current_time); // Exemplo: GMT-3 para Brasil
+../Core/Src/ethernet_ntp.c:160:5: warning: implicit declaration of function 'parse_unix_to_local_time' [-Wimplicit-function-declaration]
+  160 |     parse_unix_to_local_time(unix_time, -3, &ntp->current_time); // Exemplo: GMT-3 para Brasil
       |     ^~~~~~~~~~~~~~~~~~~~~~~~
 ../Core/Src/ethernet_ntp.c: At top level:
-../Core/Src/ethernet_ntp.c:148:6: warning: conflicting types for 'parse_unix_to_local_time'; have 'void(uint32_t,  int8_t,  RTC_Time_t *)' {aka 'void(long unsigned int,  signed char,  RTC_Time_t *)'}
-  148 | void parse_unix_to_local_time(uint32_t unix_timestamp, int8_t fuso_horario, RTC_Time_t * tempo_local) {
+../Core/Src/ethernet_ntp.c:176:6: warning: conflicting types for 'parse_unix_to_local_time'; have 'void(uint32_t,  int8_t,  RTC_Time_t *)' {aka 'void(long unsigned int,  signed char,  RTC_Time_t *)'}
+  176 | void parse_unix_to_local_time(uint32_t unix_timestamp, int8_t fuso_horario, RTC_Time_t * tempo_local) {
       |      ^~~~~~~~~~~~~~~~~~~~~~~~
-../Core/Src/ethernet_ntp.c:132:5: note: previous implicit declaration of 'parse_unix_to_local_time' with type 'void(uint32_t,  int8_t,  RTC_Time_t *)' {aka 'void(long unsigned int,  signed char,  RTC_Time_t *)'}
-  132 |     parse_unix_to_local_time(unix_time, -3, &ntp->current_time); // Exemplo: GMT-3 para Brasil
+../Core/Src/ethernet_ntp.c:160:5: note: previous implicit declaration of 'parse_unix_to_local_time' with type 'void(uint32_t,  int8_t,  RTC_Time_t *)' {aka 'void(long unsigned int,  signed char,  RTC_Time_t *)'}
+  160 |     parse_unix_to_local_time(unix_time, -3, &ntp->current_time); // Exemplo: GMT-3 para Brasil
       |     ^~~~~~~~~~~~~~~~~~~~~~~~
 arm-none-eabi-gcc -o "W5500.elf" @"objects.list"   -mcpu=cortex-m0plus -T"C:\Users\Luccas\Desktop\STM32\W5500\STM32G0B1CBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="W5500.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: W5500.elf
@@ -134,8 +32,15 @@ Finished building target: W5500.elf
 arm-none-eabi-size  W5500.elf 
 arm-none-eabi-objdump -h -S W5500.elf  > "W5500.list"
    text	   data	    bss	    dec	    hex	filename
-  54480	    108	  30156	  84744	  14b08	W5500.elf
+  54696	    108	  30156	  84960	  14be0	W5500.elf
 Finished building: default.size.stdout
  
 Finished building: W5500.list
+ 
+18:06:37 **** Incremental Build of configuration Debug for project W5500 ****
+make -j8 all 
+arm-none-eabi-size  W5500.elf 
+   text	   data	    bss	    dec	    hex	filename
+  54696	    108	  30156	  84960	  14be0	W5500.elf
+Finished building: default.size.stdout
  

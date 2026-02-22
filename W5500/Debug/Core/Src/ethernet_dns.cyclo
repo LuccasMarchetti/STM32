@@ -1,4 +1,6 @@
 ../Core/Src/ethernet_dns.c:11:10:build_dns_query	1
-../Core/Src/ethernet_dns.c:37:6:DNS_FSM	7
-../Core/Src/ethernet_dns.c:87:6:DNS_ParseResponse	17
-../Core/Src/ethernet_dns.c:162:6:DNS_HandleRx	2
+../Core/Src/ethernet_dns.c:37:6:DNS_FSM	8
+../Core/Src/ethernet_dns.c:89:6:DNS_ParseResponse	17
+../Core/Src/ethernet_dns.c:164:6:DNS_HandleRx	3
+../Core/Src/ethernet_dns.c:193:6:DNS_RequestResolution	2
+../Core/Src/ethernet_dns.c:203:14:DNS_CheckResult	2

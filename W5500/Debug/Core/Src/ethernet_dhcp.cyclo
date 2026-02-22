@@ -8,7 +8,7 @@
 ../Core/Src/ethernet_dhcp.c:229:6:dhcp_T1_expired	5
 ../Core/Src/ethernet_dhcp.c:236:6:dhcp_T2_expired	5
 ../Core/Src/ethernet_dhcp.c:243:6:dhcp_lease_expired	5
-../Core/Src/ethernet_dhcp.c:259:6:DHCP_FSM	21
-../Core/Src/ethernet_dhcp.c:379:6:DHCP_HandleRx	5
-../Core/Src/ethernet_dhcp.c:405:6:DHCP_SendRequest	1
-../Core/Src/ethernet_dhcp.c:421:6:DHCP_SendDiscover	3
+../Core/Src/ethernet_dhcp.c:259:6:DHCP_FSM	20
+../Core/Src/ethernet_dhcp.c:370:6:DHCP_HandleRx	5
+../Core/Src/ethernet_dhcp.c:396:6:DHCP_SendRequest	1
+../Core/Src/ethernet_dhcp.c:412:6:DHCP_SendDiscover	3

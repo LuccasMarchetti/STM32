@@ -27,9 +27,17 @@ typedef enum {
     DNS_ERROR
 } DNS_State_t;
 
+typedef enum {
+    DNS_RES_IDLE,
+    DNS_RES_PENDING,
+    DNS_RES_SUCCESS,
+    DNS_RES_FAILED
+} DNS_Result_t;
+
 // --- ESTRUTURA DE CONTROLE DNS ---
 typedef struct {
     DNS_State_t state;
+    DNS_Result_t result;
     uint8_t socket;
     uint32_t t_start;       // Para timeout
     uint8_t retries;        // Contador de tentativas
@@ -45,6 +53,8 @@ typedef struct W5500_Driver_t W5500_Driver_t;
 void DNS_FSM(W5500_Driver_t *drv);
 bool DNS_ParseResponse(uint8_t *buf, uint16_t len, uint8_t *resolved_ip, uint16_t expected_tx_id);
 void DNS_HandleRx(W5500_Driver_t *drv, uint8_t *buf, uint16_t len);
+bool DNS_RequestResolution(W5500_Driver_t *drv, const char *domain);
+DNS_Result_t DNS_CheckResult(W5500_Driver_t *drv, uint8_t *ip_out);
 
 #ifdef __cplusplus
 }

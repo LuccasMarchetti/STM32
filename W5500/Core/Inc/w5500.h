@@ -333,8 +333,6 @@ extern "C" {
 typedef enum {
     SYS_NET_INIT = 0,
     SYS_NET_DHCP_RUNNING,
-    SYS_NET_DNS_RUNNING,
-    SYS_NET_NTP_RUNNING,
     SYS_NET_READY
 } System_Net_State_t;
 
