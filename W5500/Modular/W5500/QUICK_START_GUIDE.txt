@@ -1,0 +1,280 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                   GUIA RÁPIDO DE INTEGRAÇÃO - W5500 Stack                    ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+█████████████████████████████████████████████████████████████████████████████████
+█ PASSO 1 - REMOVER/RENOMEAR ARQUIVOS ANTIGOS
+█████████████████████████████████████████████████████████████████████████████████
+
+Os arquivos antigos causam conflitos no IntelliSense. Já criamos a pasta de backup:
+
+    Core/Network/_OLD_BACKUP/
+
+MOVA para lá:
+    ✓ Core/Network/Core/network_manager.c/h
+    ✓ Core/Network/Driver/w5500_hal.c/h
+    ✓ Core/Network/Driver/w5500_socket.c/h
+    ✓ Core/Inc/ethernet_dhcp.h
+    ✓ Core/Src/ethernet_dhcp.c
+    ✓ Core/Inc/ethernet_dns.h
+    ✓ Core/Src/ethernet_dns.c
+    ✓ Core/Inc/ethernet_ntp.h
+    ✓ Core/Src/ethernet_ntp.c
+    ✓ Core/Inc/ethernet_telnet.h
+    ✓ Core/Src/ethernet_telnet.c
+    ✓ Core/Inc/ethernet_mdns.h (se existir)
+    ✓ Core/Src/ethernet_mdns.c (se existir)
+
+COMANDO (execute no diretório C:\Users\Luccas\Desktop\STM32\W5500):
+
+    Move-Item Core\Network\Core\* Core\Network\_OLD_BACKUP\ -Force
+    Move-Item Core\Network\Driver\w5500_hal.* Core\Network\_OLD_BACKUP\ -Force
+    Move-Item Core\Network\Driver\w5500_socket.* Core\Network\_OLD_BACKUP\ -Force
+    Move-Item Core\Src\ethernet_*.c Core\Network\_OLD_BACKUP\ -Force -ErrorAction SilentlyContinue
+    Move-Item Core\Inc\ethernet_*.h Core\Network\_OLD_BACKUP\ -Force -ErrorAction SilentlyContinue
+
+
+█████████████████████████████████████████████████████████████████████████████████
+█ PASSO 2 - VERIFICAR CONFIGURAÇÃO DE HARDWARE (CubeMX)
+█████████████████████████████████████████████████████████████████████████████████
+
+□ SPI1 configurado como Full-Duplex Master
+□ SPI Clock: 40-80 MHz (máximo que seu STM32G0 suporta)
+□ SPI DMA habilitado:
+    ✓ TX DMA: DMA1 Channel X
+    ✓ RX DMA: DMA1 Channel Y
+□ GPIO:
+    ✓ Pino CS (ex: PA4) - Output Push-Pull, High
+    ✓ Pino RST (opcional) - Output Push-Pull, High
+    ✓ Pino INT (opcional) - External Interrupt, Falling Edge
+□ FreeRTOS com CMSIS-OS v2 habilitado
+
+
+█████████████████████████████████████████████████████████████████████████████████
+█ PASSO 3 - MODIFICAR app_freertos.c
+█████████████████████████████████████████████████████████████████████████████████
+
+ABRA: Core/Src/app_freertos.c
+
+3.1) ADICIONAR INCLUDE (linha ~28):
+    ┌──────────────────────────────────────────────────────────────────┐
+    │ /* USER CODE BEGIN Includes */                                   │
+    │ #include "app_network.h"   // ← ADICIONAR ESTA LINHA             │
+    │ /* USER CODE END Includes */                                     │
+    └──────────────────────────────────────────────────────────────────┘
+
+3.2) SUBSTITUIR StartDefaultTask (linha ~130):
+    ┌──────────────────────────────────────────────────────────────────┐
+    │ void StartDefaultTask(void *argument)                            │
+    │ {                                                                │
+    │   /* USER CODE BEGIN StartDefaultTask */                         │
+    │                                                                  │
+    │   // Inicializar rede                                            │
+    │   if (Network_Init() != NET_OK) {                                │
+    │       Error_Handler();                                           │
+    │   }                                                              │
+    │                                                                  │
+    │   // Iniciar task de rede                                        │
+    │   Network_StartTask();                                           │
+    │                                                                  │
+    │   /* Infinite loop */                                            │
+    │   for(;;)                                                        │
+    │   {                                                              │
+    │       // Aguardar rede conectar                                  │
+    │       while (!Network_IsConnected()) {                           │
+    │           osDelay(1000);                                         │
+    │       }                                                          │
+    │                                                                  │
+    │       // Obter e imprimir IP                                     │
+    │       uint8_t ip[4];                                             │
+    │       Network_GetIPAddress(ip);                                  │
+    │       printf("IP: %d.%d.%d.%d\r\n", ip[0], ip[1], ip[2], ip[3]);│
+    │                                                                  │
+    │       osDelay(10000);  // Aguardar 10s                           │
+    │   }                                                              │
+    │   /* USER CODE END StartDefaultTask */                           │
+    │ }                                                                │
+    └──────────────────────────────────────────────────────────────────┘
+
+3.3) REMOVER callbacks SPI antigos (já estão em app_network.c):
+    - Apagar HAL_SPI_TxRxCpltCallback
+    - Apagar HAL_SPI_TxCpltCallback  
+    - Apagar HAL_SPI_ErrorCallback
+    - Apagar HAL_SPI_AbortCpltCallback
+    - Apagar HAL_GPIO_EXTI_Falling_Callback (se existir)
+
+    OS NOVOS CALLBACKS JÁ ESTÃO EM: Core/Src/app_network.c (linhas 348-385)
+
+
+█████████████████████████████████████████████████████████████████████████████████
+█ PASSO 4 - AJUSTAR PINOS GPIO em app_network.c
+█████████████████████████████████████████████████████████████████████████████████
+
+ABRA: Core/Src/app_network.c (linha ~180)
+
+MODIFICAR:
+    ┌──────────────────────────────────────────────────────────────────┐
+    │ W5500_HW_Config_t hw_config = {                                  │
+    │     .hspi = &hspi1,              // ← Seu SPI handle             │
+    │     .cs_port = GPIOA,            // ← Porta do CS                │
+    │     .cs_pin = GPIO_PIN_4,        // ← Pino do CS                 │
+    │     .rst_port = NULL,            // ← NULL = soft reset          │
+    │     .rst_pin = 0,                //   ou GPIOX se usar pino      │
+    │     .spi_mutex = spi_mutex,                                      │
+    │ };                                                               │
+    └──────────────────────────────────────────────────────────────────┘
+
+
+█████████████████████████████████████████████████████████████████████████████████
+█ PASSO 5 - COMPILAR E TESTAR
+█████████████████████████████████████████████████████████████████████████████████
+
+5.1) COMPILAR:
+    ✓ Clean Project
+    ✓ Build All
+    ✓ Verificar 0 erros
+
+5.2) GRAVAR E RESETAR:
+    ✓ Flash no STM32
+    ✓ Resetar MCU
+
+5.3) VERIFICAR DHCP:
+    ✓ Conectar cabo Ethernet (LED link deve acender)
+    ✓ Aguardar 5-10 segundos
+    ✓ No seu roteador, verificar lista de clientes DHCP
+    ✓ Procurar hostname "STM32-W5500"
+
+5.4) TESTAR TELNET:
+    □ No seu PC Windows:
+        > telnet <IP_DO_STM32>
+    
+    □ Se telnet não estiver instalado:
+        > dism /online /Enable-Feature /FeatureName:TelnetClient
+    
+    □ Comandos disponíveis:
+        > help       - Lista de comandos
+        > status     - Status da rede
+        > uptime     - Tempo desde boot
+        > reset      - Reinicia MCU
+        > exit       - Fecha conexão
+
+5.5) TESTAR DNS:
+    (No seu código customizado):
+        uint8_t ip[4];
+        Network_ResolveHostname("www.google.com", ip);
+
+5.6) TESTAR NTP:
+    (No seu código customizado):
+        NTP_Timestamp_t time;
+        Network_GetCurrentTime(&time);
+        printf("Unix time: %lu\r\n", time.seconds);
+
+
+█████████████████████████████████████████████████████████████████████████████████
+█ TROUBLESHOOTING
+█████████████████████████████████████████████████████████████████████████████████
+
+❌ PROBLEMA: W5500 não responde (timeout no SPI)
+   ✓ Verificar conexões SPI (MOSI, MISO, SCK, CS)
+   ✓ Verificar alimentação 3.3V do W5500
+   ✓ Adicionar pino RST e fazer reset de hardware
+   ✓ Reduzir clock SPI para 10 MHz (teste)
+
+❌ PROBLEMA: DHCP não obtém IP
+   ✓ Verificar cabo Ethernet conectado
+   ✓ LED link aceso?
+   ✓ Testar com IP estático (mudar use_dhcp = false em app_network.c)
+   ✓ Verificar roteador aceita DHCP
+
+❌ PROBLEMA: Telnet não conecta
+   ✓ DHCP obteve IP?
+   ✓ Fazer ping no IP do STM32
+   ✓ Verificar firewall Windows
+
+❌ PROBLEMA: Erros de compilação
+   ✓ Arquivos antigos ainda incluídos?
+   ✓ Paths de include corretos?
+   ✓ Limpar projeto e recompilar
+
+
+█████████████████████████████████████████████████████████████████████████████████
+█ ARQUITETURA - 5 CAMADAS
+█████████████████████████████████████████████████████████████████████████████████
+
+    ┌──────────────────────────────────────────────────────────┐
+    │  LAYER 5: SERVICES (dhcp, dns, ntp, telnet)             │
+    ├──────────────────────────────────────────────────────────┤
+    │  LAYER 4: NETWORK MANAGER (event system, service mgmt)  │
+    ├──────────────────────────────────────────────────────────┤
+    │  LAYER 3: SOCKET API (net_socket.c - Berkeley sockets)  │
+    ├──────────────────────────────────────────────────────────┤
+    │  LAYER 2: W5500 HARDWARE DRIVER (w5500_hw.c)            │
+    ├──────────────────────────────────────────────────────────┤
+    │  LAYER 1: W5500 LOW-LEVEL (w5500_ll.c - SPI + DMA)      │
+    └──────────────────────────────────────────────────────────┘
+                              ↓↑
+                        STM32 HAL (SPI/DMA)
+
+
+█████████████████████████████████████████████████████████████████████████████████
+█ RECURSOS ADICIONAIS
+█████████████████████████████████████████████████████████████████████████████████
+
+📄 Documentação completa:
+    ✓ README.md
+    ✓ ARCHITECTURE.md
+    ✓ INTEGRATION_CHECKLIST.md
+    ✓ MIGRATION_GUIDE.md
+    ✓ IMPLEMENTATION_TIPS.md
+
+📁 Arquivos criados (30+ total):
+    ✓ 8 documentações
+    ✓ 10 drivers/abstração (net_*, w5500_*)
+    ✓ 8 serviços (dhcp, dns, ntp, telnet)
+    ✓ 2 integração (app_network.c/h)
+    ✓ 2 exemplos
+
+💾 Consumo de recursos:
+    RAM:  ~6-8 KB
+    Flash: ~20-30 KB
+    Stacks: 2 KB (NetworkTask) + ~1 KB por serviço
+
+
+█████████████████████████████████████████████████████████████████████████████████
+█ CUSTOMIZAÇÃO
+█████████████████████████████████████████████████████████████████████████████████
+
+→ ADICIONAR COMANDO TELNET CUSTOMIZADO:
+    Editar: Core/Src/app_network.c, função TelnetCommandHandler (linha ~110)
+
+→ MUDAR SERVIDOR NTP:
+    Editar: Core/Src/app_network.c, linha ~235
+    uint8_t ntp_server[] = {193, 182, 111, 12};  // pool.ntp.org
+
+→ USAR IP ESTÁTICO:
+    Editar: Core/Src/app_network.c, linha ~212
+    mgr_config.use_dhcp = false;
+    use_static_ip = true;
+
+→ AJUSTAR PERÍODO DA TASK:
+    Editar: Core/Src/app_network.c, linha ~210
+    mgr_config.task_period_ms = 10;  // Default: 10ms
+
+
+█████████████████████████████████████████████████████████████████████████████████
+█ SUCESSO!
+█████████████████████████████████████████████████████████████████████████████████
+
+Agora você tem:
+    ✅ Stack de rede completa e modular
+    ✅ DHCP client funcional
+    ✅ DNS client com cache
+    ✅ NTP client com auto-sync
+    ✅ Telnet server com CLI
+    ✅ Interrupções W5500 habilitadas
+    ✅ DMA em SPI (máximo desempenho)
+    ✅ Thread-safe (mutex + semaphores)
+    ✅ Documentação completa
+
+Bom desenvolvimento! 🚀
+

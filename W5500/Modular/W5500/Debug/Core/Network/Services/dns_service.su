@@ -1,0 +1,14 @@
+../Core/Network/Services/dns_service.c:37:17:EncodeDomainName	40	static
+../Core/Network/Services/dns_service.c:66:17:DecodeDomainName	48	static
+../Core/Network/Services/dns_service.c:98:13:AddToCache	40	static
+../Core/Network/Services/dns_service.c:132:13:DNS_RxCallback	656	static
+../Core/Network/Services/dns_service.c:204:17:DNS_ServiceInit	32	static
+../Core/Network/Services/dns_service.c:223:13:DNS_ServiceTask	320	static
+../Core/Network/Services/dns_service.c:274:13:DNS_ServiceDeinit	24	static
+../Core/Network/Services/dns_service.c:284:13:DNS_ServiceEventHandler	24	static
+../Core/Network/Services/dns_service.c:303:10:DNS_Init	16	static
+../Core/Network/Services/dns_service.c:327:10:DNS_Query	40	static
+../Core/Network/Services/dns_service.c:360:10:DNS_LookupCache	40	static
+../Core/Network/Services/dns_service.c:384:10:DNS_SetServer	16	static
+../Core/Network/Services/dns_service.c:394:6:DNS_ClearCache	24	static
+../Core/Network/Services/dns_service.c:402:15:DNS_GetService	16	static

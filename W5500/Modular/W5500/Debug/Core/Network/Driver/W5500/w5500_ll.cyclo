@@ -1,0 +1,14 @@
+../Core/Network/Driver/W5500/w5500_ll.c:17:19:W5500_LL_Init	5
+../Core/Network/Driver/W5500/w5500_ll.c:51:6:W5500_LL_SetAddressPhase	1
+../Core/Network/Driver/W5500/w5500_ll.c:66:19:W5500_LL_Transmit	5
+../Core/Network/Driver/W5500/w5500_ll.c:99:19:W5500_LL_TransmitReceive	5
+../Core/Network/Driver/W5500/w5500_ll.c:141:19:W5500_LL_WriteCommonReg	1
+../Core/Network/Driver/W5500/w5500_ll.c:152:19:W5500_LL_ReadCommonReg	2
+../Core/Network/Driver/W5500/w5500_ll.c:169:19:W5500_LL_WriteCommonRegBurst	2
+../Core/Network/Driver/W5500/w5500_ll.c:185:19:W5500_LL_ReadCommonRegBurst	3
+../Core/Network/Driver/W5500/w5500_ll.c:211:19:W5500_LL_WriteSocketReg	2
+../Core/Network/Driver/W5500/w5500_ll.c:227:19:W5500_LL_ReadSocketReg	3
+../Core/Network/Driver/W5500/w5500_ll.c:249:19:W5500_LL_WriteSocketRegBurst	3
+../Core/Network/Driver/W5500/w5500_ll.c:266:19:W5500_LL_ReadSocketRegBurst	4
+../Core/Network/Driver/W5500/w5500_ll.c:293:19:W5500_LL_WriteSocketTxBuf	3
+../Core/Network/Driver/W5500/w5500_ll.c:310:19:W5500_LL_ReadSocketRxBuf	4

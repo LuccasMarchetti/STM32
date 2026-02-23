@@ -1,0 +1,17 @@
+../Core/Network/Services/dhcp_service.c:86:17:GenerateXID	24	static
+../Core/Network/Services/dhcp_service.c:94:17:AddOption	40	static
+../Core/Network/Services/dhcp_service.c:106:13:ParseOptions	40	static
+../Core/Network/Services/dhcp_service.c:180:17:BuildDHCPDiscover	64	static
+../Core/Network/Services/dhcp_service.c:226:17:BuildDHCPRequest	64	static
+../Core/Network/Services/dhcp_service.c:284:13:DHCP_RxCallback	720	static
+../Core/Network/Services/dhcp_service.c:406:10:DHCP_Init	16	static
+../Core/Network/Services/dhcp_service.c:421:6:DHCP_Deinit	16	static
+../Core/Network/Services/dhcp_service.c:428:10:DHCP_Start	16	static
+../Core/Network/Services/dhcp_service.c:454:6:DHCP_Stop	16	static
+../Core/Network/Services/dhcp_service.c:468:6:DHCP_Task	680	static
+../Core/Network/Services/dhcp_service.c:589:6:DHCP_EventHandler	16	static
+../Core/Network/Services/dhcp_service.c:612:14:DHCP_GetState	16	static
+../Core/Network/Services/dhcp_service.c:616:6:DHCP_IsBound	16	static
+../Core/Network/Services/dhcp_service.c:620:10:DHCP_GetConfig	16	static
+../Core/Network/Services/dhcp_service.c:640:10:DHCP_Renew	16	static
+../Core/Network/Services/dhcp_service.c:656:10:DHCP_Release	16	static

@@ -1,0 +1,7 @@
+../Core/Src/ethernet_mdns.c:13:19:mdns_parse_query	17
+../Core/Src/ethernet_mdns.c:85:10:format_mdns_name	1
+../Core/Src/ethernet_mdns.c:101:10:build_mdns_response_A	1
+../Core/Src/ethernet_mdns.c:133:10:format_mdns_reverse_ip	2
+../Core/Src/ethernet_mdns.c:160:10:build_mdns_response_PTR	1
+../Core/Src/ethernet_mdns.c:196:19:W5500_mDNS_Start	2
+../Core/Src/ethernet_mdns.c:222:6:W5500_mDNS_HandleRx	3

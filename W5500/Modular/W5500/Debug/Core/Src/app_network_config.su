@@ -1,0 +1,5 @@
+../Core/Src/app_network_config.c:37:20:AppNetwork_GetDefaultConfig	24	static
+../Core/Src/app_network_config.c:44:5:AppNetwork_SetNTPServerByHostname	24	static
+../Core/Src/app_network_config.c:56:5:AppNetwork_SetNTPServerByIP	24	static
+../Core/Src/app_network_config.c:68:5:AppNetwork_SetmDNSHostname	16	static
+../Core/Src/app_network_config.c:77:6:AppNetwork_ApplyDHCPNTPServer	24	static
