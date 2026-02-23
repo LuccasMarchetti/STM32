@@ -1,6 +1,0 @@
-../Core/Src/ethernet_dns.c:11:10:build_dns_query	24	static
-../Core/Src/ethernet_dns.c:37:6:DNS_FSM	32	static
-../Core/Src/ethernet_dns.c:89:6:DNS_ParseResponse	48	static
-../Core/Src/ethernet_dns.c:164:6:DNS_HandleRx	48	static
-../Core/Src/ethernet_dns.c:193:6:DNS_RequestResolution	16	static
-../Core/Src/ethernet_dns.c:203:14:DNS_CheckResult	16	static
